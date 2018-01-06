@@ -22,6 +22,6 @@ Works on anything from iOS 6.0, too!
 [YT](https://www.youtube.com/channel/UCacmsEiwn3EGxqunXwibAsw)  
 [SoundCloud](https://soundcloud.com/r618)  
 
-# Donation Button
+### (in emergency cases use)
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3JB2N8R3WWTUQ)
