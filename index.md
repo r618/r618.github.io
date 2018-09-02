@@ -14,7 +14,7 @@ Works on anything from iOS 8.0, too!
 
 ### Support for AudioStream:
 - [please see Unity forums](http://forum.unity3d.com/threads/audiostream-an-audio-streaming-solution-for-all-and-everywhere.412029/)
-- and/or don't hesitate to ask via email if needed: mcv618 at the_usual_free_email_service (replace 'at' with @ and 'the_usual_free_email_service' with gmail.com -))
+- and/or don't hesitate to ask via email if needed: mcv618 at the_usual_free_email_service (replace 'at' with @ and 'the_usual_free_email_service' with gmail.com)
   
 ### @
 [Twitter](http://twitter.com/r618)  
