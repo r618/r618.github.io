@@ -1,7 +1,7 @@
 title: ~/.
 description: of Martin Cvengroš
 google_analytics: UA-83603222-1
-show_downloads: true
+show_downloads: false
 theme: jekyll-theme-minimal
 
 gems:
