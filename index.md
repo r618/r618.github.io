@@ -10,7 +10,7 @@
 
 ### AudioStreamIce is complete Unity SHOUTcast/Iceceast client with deep iOS support
 - plays supported audio formats also from cloud and locally
-- [= AudioStreamIce =](https://assetstore.unity.com/packages/slug/223601?aid=1100l7sC8) [included documentation available also here]([https://github.com/r618/AudioStreamDocs](https://github.com/r618/AudioStreamIceDocs)
+- [= AudioStreamIce =](https://assetstore.unity.com/packages/slug/223601?aid=1100l7sC8) [included documentation available also here](https://github.com/r618/AudioStreamIceDocs)
 - for support [please see Unity forums](https://forum.unity.com/threads/audiostreamice.1289045)
 
 
