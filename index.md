@@ -10,9 +10,13 @@
 
 ### AudioStreamIce is complete Unity SHOUTcast/Iceceast client with deep iOS support
 - plays supported audio formats also from cloud and locally
-- ASlink: [= AudioStreamIce =](https://assetstore.unity.com/packages/slug/223601?aid=1100l7sC8) , [included documentation available also here](https://github.com/r618/AudioStreamIceDocs)
+- Asset Store: [= AudioStreamIce =](https://assetstore.unity.com/packages/slug/223601?aid=1100l7sC8) , [included documentation available also here](https://github.com/r618/AudioStreamIceDocs)
 - for support [please see Unity forums](https://forum.unity.com/threads/audiostreamice.1289045)
 
+### AudioStreamNetCode is client/server audio solution for Unity
+- based on 'NetCode for GameObjects' networking transport
+- Asset Store: [= AudioStreamNetCode =](https://assetstore.unity.com/packages/slug/233329?aid=1100l7sC8), [latest documentation](https://github.com/r618/AudioStreamNetCodeDocs/tree/master)
+- for support [please see Unity forums](https://forum.unity.com/threads/audiostreamnetcode-network-audio-based-on-netcode-for-gameobjects.1318635/)
 
 #### :: Kinect sensor (K1, K2 and Azure) FOV helper for calculating sensor coverage & distances: [KinectFOVCalculator](KinectFOVCalculator/index.html)
 
