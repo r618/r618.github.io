@@ -19,6 +19,12 @@
 - Asset Store: [= AudioStreamNetCode =](https://assetstore.unity.com/packages/slug/233329?aid=1100l7sC8), [latest documentation](https://github.com/r618/AudioStreamNetCodeDocs/tree/master)
 - for support [please see Unity forums](https://forum.unity.com/threads/audiostreamnetcode-network-audio-based-on-netcode-for-gameobjects.1318635/)
 
+### AudioStreamSpeechCelurean - Unity firendly Speech recognition/synthesis via Microsoft Azure Congnitive Services
+- based on [Microsoft Cognitive Service Speech SDK](https://github.com/Azure-Samples/cognitive-services-speech-sdk)
+- Asset Store: [o AudioStreamSpeechCelurean o](https://assetstore.unity.com/packages/slug/247489?aid=1100l7sC8), [latest documentation](https://github.com/r618/AudioStreamSpeechCerulean_Docs)
+- for support please feel free to use [Unity forums](https://forum.unity.com/threads/in-development-audiostreamspeechcelurean.1388841/)
+
+#### ==o===.o= ####
 #### :: Kinect sensor (K1, K2 and Azure) FOV helper for calculating sensor coverage & distances: [KinectFOVCalculator](KinectFOVCalculator/index.html)
 
 ### @
