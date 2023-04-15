@@ -14,7 +14,7 @@
 - for support [please see Unity forums](https://forum.unity.com/threads/audiostreamice.1289045)
 - it's also on Itch: [= AudioStreamIce =](https://r618.itch.io/audiostreamice)
 
-### AudioStreamNetCode is client/server audio solution for Unity
+### AudioStreamNetCode - client/server audio solution for Unity
 - based on 'NetCode for GameObjects' networking transport
 - Asset Store: [= AudioStreamNetCode =](https://assetstore.unity.com/packages/slug/233329?aid=1100l7sC8), [latest documentation](https://github.com/r618/AudioStreamNetCodeDocs/tree/master)
 - for support [please see Unity forums](https://forum.unity.com/threads/audiostreamnetcode-network-audio-based-on-netcode-for-gameobjects.1318635/)
@@ -24,7 +24,14 @@
 - Asset Store: [o AudioStreamSpeechCelurean o](https://assetstore.unity.com/packages/slug/247489?aid=1100l7sC8), [latest documentation](https://github.com/r618/AudioStreamSpeechCerulean_Docs)
 - for support please feel free to use [Unity forums](https://forum.unity.com/threads/in-development-audiostreamspeechcelurean.1388841/)
 
-#### ==o===.o= ####
+### AudioStreamSpeechWhisper - Unity asset for offline speech recognition - 
+- based on whisper.cpp | a very efficient native implementation of OpenAI's Whisper by [ggerganov](https://github.com/ggerganov/whisper.cpp) |
+- primary platforms are Apple Silicon (M1 or better), and standalones
+- supports Windows, Linux, macOS, Android and iOS
+- Asset Store: ['AudioStreamSpeechWhisper.](https://assetstore.unity.com/packages/slug/252484?aid=1100l7sC8), [latest documentation](https://github.com/r618/AudioStreamSpeechWhisperDocs)
+- for support please see [Unity forums](https://forum.unity.com/threads/under-review-audiostreamspeechwhisper-offline-speech-recognition-system.1425582/)
+
+#### .==o===o=. ####
 #### :: Kinect sensor (K1, K2 and Azure) FOV helper for calculating sensor coverage & distances: [KinectFOVCalculator](KinectFOVCalculator/index.html)
 
 ### @
