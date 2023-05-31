@@ -32,7 +32,6 @@
 
 #### .==o===o=. ####
 #### :: Kinect sensor (K1, K2 and Azure) FOV helper for calculating sensor coverage & distances: [KinectFOVCalculator](KinectFOVCalculator/index.html)
-. |
 
 ### @
 - some current [works/installations for client](https://www.youtube.com/channel/UCVdrkPBPUXeglvUY4hqOydA)  
@@ -42,4 +41,3 @@
 
 ### (in emergency cases use)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3JB2N8R3WWTUQ)
-. |
