@@ -30,8 +30,7 @@
 - Asset Store: ['AudioStreamSpeechWhisper.](https://assetstore.unity.com/packages/slug/252484?aid=1100l7sC8), [latest documentation](https://github.com/r618/AudioStreamSpeechWhisperDocs)
 - for support please see [Unity forums](https://forum.unity.com/threads/under-review-audiostreamspeechwhisper-offline-speech-recognition-system.1425582/) |
 
-#### .==o===o=. ####
-#### :: Kinect sensor (K1, K2 and Azure) FOV helper
+#### .==o===o=. :: Kinect sensor (K1, K2 and Azure) FOV helper
 - for calculating sensor coverage & distances: [KinectFOVCalculator](KinectFOVCalculator/index.html) |
 
 ### @
