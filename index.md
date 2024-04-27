@@ -1,5 +1,5 @@
 ### About
-.stuff I make is mostly human related
+.stuff I make is mostly humans related
 
 ### AudioStream is an audio solution for Unity based on FMOD
 - [AudioStream _--====--_](https://assetstore.unity.com/packages/tools/audio/audiostream-65411?aid=1100l7sC8) - an Unity package providing input and output audio streaming ( [included documentation available also here](https://github.com/r618/AudioStreamDocs) )
