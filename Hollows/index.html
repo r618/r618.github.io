@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollows Of Rogue</title>
+    <style>
+        body {
+            font-family: ui-monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        header {
+            background-color: #333;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .main-image {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #222;
+        }
+
+        .main-image::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+        }
+
+        .main-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .feature {
+            width: 30%;
+            background-color: #222;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .feature h3 {
+            margin-top: 0;
+        }
+        .cta-button {
+            display: block;
+            width: 200px;
+            margin: 40px auto;
+            padding: 15px;
+            background-color: #222;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        @media screen and (max-width: 768px) {
+            .features, .screenshots {
+                flex-direction: column;
+            }
+
+            .feature, .screenshot {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>. - Hollows Of Rogue - .</h1>
+    </header>
+    <div class="container">
+        <img src="PR00.png" alt="" class="main-image">
+        <div class="features">
+            <div class="feature">
+                <h3>"Rogue, but better!"</h3>
+                <p>An adaptation of old ASCII text terminals game from '80s which gave the genre its name, remade for new era.</p>
+                <img src="SCR00.png" alt="" class="main-image">
+            </div>
+            <div class="feature">
+                <h3>Optimized for touch screens</h3>
+                <p>Swipe to move, all commands via touch optimized modal interactions. Plus some new ones.</p>
+                <img src="SCR01.png" alt="" class="main-image">
+            </div>
+            <div class="feature">
+                <h3>Adjustable difficulty</h3>
+                <p>The original game was hard and extremely punishing - some original game features can be turned off, and there's no hunger mechanic.</p>
+                <img src="SCR02.png" alt="" class="main-image">
+            </div>
+        </div>
+        <a href="#" class="cta-button"><img src="appstorebadge.png" alt="" class="main-image"></a>
+    </div>
+    <footer>
+        <p>&copy; 2024 Martin Cvengros. All rights reserved.</p>
+    </footer>
+</body>
+</html>
