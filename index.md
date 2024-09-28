@@ -32,6 +32,9 @@
 #### .==o===o=. :: Kinect sensor (K1, K2 and Azure) FOV helper
 - for calculating sensor coverage & distances: [KinectFOVCalculator](KinectFOVCalculator/index.html) |
 
+### [Hollows Of Rogue](https://r618.github.io/Hollows/)
+- "Rogue, but better!" - a modernized, easy to pick up and play Rogue clone with many QoL improvements
+
 ### @
 - some current [works/installations for client](https://www.youtube.com/channel/UCVdrkPBPUXeglvUY4hqOydA)  
 - [Twitter](http://twitter.com/r618)  
