@@ -21,6 +21,7 @@
 - Asset Store: [o AudioStreamSpeechCelurean o](https://assetstore.unity.com/packages/slug/247489?aid=1100l7sC8), [latest documentation](https://github.com/r618/AudioStreamSpeechCerulean_Docs)
 - for support please feel free to use [Unity forums](https://forum.unity.com/threads/in-development-audiostreamspeechcelurean.1388841/) |
 
+<!-- EOL
 ### AudioStreamSpeechWhisper - Unity asset for offline speech recognition -
 - based on whisper.cpp - a very efficient native implementation of OpenAI's Whisper by [ggerganov](https://github.com/ggerganov/whisper.cpp)
 - primary platforms are Apple Silicon (M1 or better), and standalones
@@ -28,6 +29,7 @@
 - features custom VAD (Voice Activity Detection) on live audio
 - Asset Store: ['AudioStreamSpeechWhisper.](https://assetstore.unity.com/packages/slug/252484?aid=1100l7sC8), [latest documentation](https://github.com/r618/AudioStreamSpeechWhisperDocs)
 - for support please see [Unity forums](https://forum.unity.com/threads/under-review-audiostreamspeechwhisper-offline-speech-recognition-system.1425582/) |
+-->
 
 #### .==o===o=. :: Kinect sensor (K1, K2 and Azure) FOV helper
 - for calculating sensor coverage & distances: [KinectFOVCalculator](KinectFOVCalculator/index.html) |
