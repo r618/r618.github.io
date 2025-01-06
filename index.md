@@ -41,7 +41,7 @@
 - some current [works/installations for client](https://www.youtube.com/channel/UCVdrkPBPUXeglvUY4hqOydA)  
 - [Twitter](http://twitter.com/r618)  
 - [YT](https://www.youtube.com/channel/UCacmsEiwn3EGxqunXwibAsw)  
-- [SoundCloud](https://soundcloud.com/r618) / [Bandcamp](https://r618.bandcamp.com/album/less-than-3)
+- [SoundCloud](https://soundcloud.com/r618) / [Bandcamp](https://r618.bandcamp.com/)
 
 ### (in emergency cases use)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3JB2N8R3WWTUQ) |
