@@ -31,6 +31,10 @@
 - for support please see [Unity forums](https://forum.unity.com/threads/under-review-audiostreamspeechwhisper-offline-speech-recognition-system.1425582/)
 -->
 
+### BlendScape - projection mapping and edge blending Unity package
+- source camera independent, single shader edge blending and projection which works across all rendering pipelines
+- Asset Store: [◧ BlendScape ▩](https://assetstore.unity.com/packages/slug/320693?aid=1100l7sC8)
+
 #### .==o===o=. :: Kinect sensor (K1, K2 and Azure) FOV helper
 - for calculating sensor coverage & distances: [KinectFOVCalculator](KinectFOVCalculator/index.html)
 
