@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollows Of NHI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        header {
+            background-color: #333;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .main-image {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #222;
+        }
+
+        .main-image::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+        }
+
+        .main-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .feature {
+            width: 30%;
+            background-color: #222;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .feature h3 {
+            margin-top: 0;
+        }
+        .cta-button {
+            display: block;
+            width: 200px;
+            margin: auto;
+            padding: 15px;
+            background-color: #222;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        @media screen and (max-width: 768px) {
+            .features, .screenshots {
+                flex-direction: column;
+            }
+
+            .feature, .screenshot {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>.o Hollows Of NHI o.</h1>
+    </header>
+    <div class="container">
+        <!-- <img src="PR00.png" alt="" class="main-image"> -->
+        <div class="features">
+            <div class="feature">
+                <h3></h3>
+                <iframe height="320" src="https://youtube.com/embed/wsSJ2CKe4cA?controls=1" class="main-image">
+                </iframe>                
+            </div>
+            <div class="feature">
+                <h3>"A Disclosure Rogue"</h3>
+                <p>Traditional roguelike where you enter the secret coverup complex in hopes of exposing the UFO conspiracy. Descend into a dark procedural complex teeming with secrets, symbols, and non-human intelligences. Find The Archives of Disclosure and use them to escape and expose the truth for the whole world - or die trying. An adaptation of timeless classic set in modern technology era. Now also with new graphics, sounds, ambience and music.</p>
+                <img src="SCR00.png" alt="" class="main-image">
+            </div>
+            <div class="feature">
+                <h3>Touch screen friendly</h3>
+                <p>Swipe to move around, pinch to zoom, drag to pan around the dungeon. There's also virtual d-pad, and zoom and pan can be used with single finger only. Supports both portrait and landscape. Use all hero commands via modal menus interactions. Has several 'quick' buttons for common actions and new command to navigate automatically to the exit.</p>
+                <img src="SCR01.png" alt="" class="main-image">
+            </div>
+        </div>
+        <p>Tiles by Oryx</p>
+        <!--
+            a       class="cta-button"
+            img     class="main-image"
+         -->
+        <a href="" ><img src="appstorebadge.png" alt="" width="200px"></a>
+        <a href="" ><img src="macappstorebadge.png" alt="" width="200px"></a>
+        
+        <a href=""><img src="itchio.png" alt="" alt="" width="200"></a>
+
+    </div>
+    <footer>
+        <p>&copy; 2024-2025<a href="https://r618.github.io/">Martin Cvengroš.</a> (<a href="privacypolicy.txt">Privacy policy</a>)</p>
+    </footer>
+</body>
+</html>

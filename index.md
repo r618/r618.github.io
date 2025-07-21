@@ -41,6 +41,9 @@
 ### [Hollows Of Rogue](https://r618.github.io/Hollows/)
 - "Rogue, but better!" - a modernized, easy to pick up and play Rogue clone with many QoL improvements
 
+### [Hollows Of NHI](https://r618.github.io/HollowsOfNHI/)
+- "A Disclosure Rogue!" - a Rogue variant set in the modern age of complete disclosure.
+
 ### @
 - some current [works/installations for client](https://www.youtube.com/channel/UCVdrkPBPUXeglvUY4hqOydA)  
 - [Twitter](http://twitter.com/r618)  
