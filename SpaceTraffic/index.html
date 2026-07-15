@@ -120,6 +120,7 @@
             justify-self: center;
             max-width: 100%;
             object-fit: contain;
+            cursor: zoom-in;
         }
         .available-shot {
             width: 100%;
@@ -162,6 +163,28 @@
         }
         .contact {
             margin: 30px 0 0;
+        }
+        /* fullscreen lightbox for feature images */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            box-sizing: border-box;
+            background: rgba(4, 5, 10, 0.88);
+            backdrop-filter: blur(4px);
+            cursor: zoom-out;
+        }
+        .lightbox.open {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: 100%;
+            max-height: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
         }
         footer {
             background-color: #333;
@@ -264,5 +287,33 @@
     <footer>
         <p>&copy; 2026&ndash;present <a href="https://r618.github.io/">Martin Cvengroš</a> (<a href="privacypolicy.txt">Privacy policy</a>)<img src="//ipv4.games/claim/r618"></p>
     </footer>
+
+    <div class="lightbox" id="lightbox">
+        <img src="" alt="">
+    </div>
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+
+        document.querySelectorAll('.feature-row img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('open');
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('open');
+            lightboxImg.src = '';
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('open');
+                lightboxImg.src = '';
+            }
+        });
+    </script>
 </body>
 </html>
