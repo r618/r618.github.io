@@ -48,6 +48,7 @@
         }
         .hero-devices img {
             height: auto;
+            cursor: zoom-in;
         }
         .hero-devices .device-mac {
             display: block;
@@ -295,7 +296,7 @@
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = lightbox.querySelector('img');
 
-        document.querySelectorAll('.feature-row img').forEach(img => {
+        document.querySelectorAll('.feature-row img, .hero-devices img').forEach(img => {
             img.addEventListener('click', () => {
                 lightboxImg.src = img.src;
                 lightboxImg.alt = img.alt;
