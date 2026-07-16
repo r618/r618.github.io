@@ -44,7 +44,7 @@
 ### [Hollows Of NHI](https://r618.github.io/HollowsOfNHI/)
 - "A Disclosure Rogue!" - a Rogue variant set in the modern age of complete disclosure.
 
-### [Space Traffic](https://r618.github.io/SpaceTraffic/)
+### [Space Pulse](https://r618.github.io/SpacePulse/)
 - I missed simple, quickly glanceable widget for displaying Moon and other bodies (iOS/macOS, scientifically accurate)
 
 ### @
