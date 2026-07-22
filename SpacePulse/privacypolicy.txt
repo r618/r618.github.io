@@ -1,23 +1,55 @@
 Privacy Policy
-Last updated: Sept 2024
+Last updated: July 22, 2026
 
-[Martin Cvengroš] ("we", "our", or "us") operates [Space Pulse: Cosmic Glance] (the "App"). This Privacy Policy outlines our commitment to your privacy and explains how we handle information in relation to the App.
+Martin Cvengroš ("we", "our", or "us") operates Space Pulse: Cosmic Glance (the "App"). This policy explains how the App uses location and network services. The App has no account system, advertising, tracking, profiling, or third-party analytics.
 
-1. No Collection of Personal Data
-We do not collect, store, or process any personal information or data from users when they download, access, or use the App. This includes, but is not limited to:
+1. Location Services
 
-Name
-Email address
-Phone number
-Payment information
-Location data
-IP address
-Cookies
+Location access is optional. The App requests access through Apple's Core Location permission system only after you choose to continue from the App's location explanation.
 
-2. No Use of Analytics or Tracking
-The App does not use any third-party analytics tools, cookies, or tracking technologies. We do not track, monitor, or gather information regarding your usage of the App.
+When permission is granted, the App uses the device's current latitude and longitude to calculate where the selected Sun, Moon, or planet appears in your sky. This includes altitude, direction, rise, and set times.
 
-3. Contact Us
-If you have any questions or concerns about this Privacy Policy, please contact us:
+The App sends the coordinates to Apple's reverse-geocoding service solely to determine the correct time zone for local rise and set dates. Apple processes this request under Apple's privacy policy:
+https://www.apple.com/legal/privacy/
+
+The developer does not receive your coordinates and does not operate a server that receives location data. Location is not sold, used for advertising, used for tracking, or shared for marketing.
+
+2. On-Device Location Storage and Widgets
+
+The most recent latitude, longitude, time-zone identifier, and update time are stored locally in the App's shared app-group container. This allows the App and its widgets to display local sky information without repeatedly requesting a new location.
+
+The App and widgets check their applicable Location Services authorization before using stored coordinates. If location authorization becomes denied or restricted, the App stops using location, cancels pending reverse-geocoding work, and clears the cached coordinates after receiving the authorization change. The App remains usable without location, but local sky position, direction, rise, and set information is unavailable.
+
+You can change access at any time:
+
+- macOS: System Settings > Privacy & Security > Location Services
+- iPhone or iPad: Settings > Privacy & Security > Location Services
+
+macOS may retain your permission decision even after the App is removed. This is managed by macOS, not by the App.
+
+3. NASA and NOAA Content Requests
+
+The App fetches current Sun imagery from NASA's Solar Dynamics Observatory and space-weather forecast data from NOAA's Space Weather Prediction Center. Location coordinates and location-derived values are never included in these requests.
+
+Like ordinary internet requests, NASA and NOAA receive technical request information such as the originating IP address, request time, and requested resource. They may retain server logs for service operation and security under their own privacy policies:
+
+NASA: https://www.nasa.gov/privacy/
+NOAA/National Weather Service: https://www.weather.gov/privacy
+
+4. Information We Do Not Collect
+
+The developer does not collect names, email addresses, phone numbers, payment information, user accounts, location histories, advertising identifiers, analytics, or in-app usage profiles through the App. The App does not contain advertising or third-party analytics SDKs and does not use App data to track you across apps or websites.
+
+5. Data Retention and Your Choices
+
+Cached location information remains only in the local app-group container until it is replaced by a newer location, cleared after authorization is denied or restricted, or removed with the App's data. You may decline location when prompted and continue using all features that do not require a local sky position.
+
+6. Changes to This Policy
+
+We may update this policy when the App's behavior or legal requirements change. The "Last updated" date identifies the current version.
+
+7. Contact Us
+
+If you have questions or concerns about this Privacy Policy, contact:
 
 Email: mcv618 _ at _ gmail _ dot _ com
