@@ -16,7 +16,7 @@ The developer does not receive your coordinates and does not operate a server th
 
 2. On-Device Location Storage and Widgets
 
-The most recent latitude, longitude, time-zone identifier, and update time are stored locally in the App's shared app-group container. This allows the App and its widgets to display local sky information without repeatedly requesting a new location.
+The most recent latitude, longitude, time zone identifier, and update time are stored locally in the App's shared app-group container. This allows the App and its widgets to display local sky information without repeatedly requesting a new location.
 
 The App and widgets check their applicable Location Services authorization before using stored coordinates. If location authorization becomes denied or restricted, the App stops using location, cancels pending reverse-geocoding work, and clears the cached coordinates after receiving the authorization change. The App remains usable without location, but local sky position, direction, rise, and set information is unavailable.
 

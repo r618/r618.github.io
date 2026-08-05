@@ -12,7 +12,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>. x Trace Sonic x .</title>
+    <title>. x TraceSonic - Additive Image Synthesizer x .</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -249,84 +249,84 @@
 </head>
 <body>
    <header>
-        <h1>.o|o|·|.|&nbsp;&nbsp;x Trace Sonic x&nbsp;&nbsp;|.|·|o|o.</h1>
+        <h1>.o|o|·|.|&nbsp;&nbsp;x TraceSonic x&nbsp;&nbsp;|.|·|o|o.</h1>
     </header>
     <div class="container">
         <p class="hero-tagline">
-            `Trace Sonic` is an iOS, iPadOS and macOS experimental additive synthetizer which produces audio based on screen pixel data from images and/or from user's drawings on time-frequency grid canvas. It has several fixed oscillators and wavetables, harmonic brushes, supports AUv3 and incoming MIDI notes and has handful of factory presets and patterns which can be also imported as images by user.
+            TraceSonic is an experimental additive synthesizer for iOS, iPadOS, and macOS. It turns pixel data from images and drawings on a time-frequency canvas into sound. Explore built-in oscillators and wavetables, harmonic brushes, AUv3 support, MIDI input, factory presets, and image-based patterns.
         </p>
 
         <div class="hero-devices">
-            <img src="mainApp_macOS.png" alt="Trace Sonic main app on Mac" class="device-mac">
-            <img src="mainApp_iOS.png" alt="Trace Sonic main app on iPhone" class="device-iphone">
-            <img src="mainApp_iPadOS.png" alt="Trace Sonic main app on iPad" class="device-ipad">
+            <img src="mainApp_macOS.png" alt="TraceSonic main app on Mac" class="device-mac">
+            <img src="mainApp_iOS.png" alt="TraceSonic main app on iPhone" class="device-iphone">
+            <img src="mainApp_iPadOS.png" alt="TraceSonic main app on iPad" class="device-ipad">
         </div>
 
         <div class="features">
             <div class="feature">
                 <h3>Canvas</h3>
                 <div class="feature-row">
-                    <h2>Paint / Erase</h2>
-                    <img src="canvas_Brushes.png" alt="" class="widget-large">
-                    <p>Use one of predefined brushes to paint over time and frequency bands; harmonic brushes are included and you can paint either freely or snap to currently available pitches. There is Undo/Redo and Eraser with current brush and you can be paiting while eveything is running.
+                    <h2>Paint and erase</h2>
+                    <img src="canvas_Brushes.png" alt="Brush selection menu with harmonic brushes" class="widget-large">
+                    <p>Choose from predefined brushes to paint across time and frequency bands. Harmonic brushes are included. Draw freely or snap to available pitches. Undo, redo, and erase with the current brush while the audio continues to play.
                     </p>
                 </div>
                 <div class="feature-row">
                     <h2>Patterns</h2>
-                    <img src="canvas_Patterns.png" alt="" class="widget-large">
-                    <p>There are several 'patterns' - canvas paitings - included; some of them are precise harmonic spectral renders suitable for lasting notes, some are more rhythmic and others can be used for audio effects or just pure weirdness or random starting points.</p>
+                    <img src="canvas_Patterns.png" alt="Menu of included harmonic and rhythmic canvas patterns" class="widget-large">
+                    <p>Explore included canvas patterns. Some provide precise harmonic spectra for sustained notes, while others create rhythms, effects, unusual sounds, or starting points for further experimentation.</p>
                 </div>
                 <div class="feature-row">
                     <h2>User images</h2>
-                    <img src="canvas_Images.png" alt="" class="widget-large">
-                    <p>Or import your own images which will then drive the audio..; you can either replace or combine with existing paint when adding a pattern/image. (opened images are converted to grayscale before usage, note that normal photographs are very signal saturated, so they might not sound as you'd expect, but they work.)
+                    <img src="canvas_Images.png" alt="Image import controls for the TraceSonic canvas" class="widget-large">
+                    <p>Import your own images and turn them into sound. Replace the current canvas or combine an image with existing content. Imported images are converted to grayscale. Photographs often contain dense spectral data, so the result can sound different from what you expect.
                     </p>
                 </div>
             </div>
             <div class="feature">
-                <h3>Synthetizer</h3>
+                <h3>Synthesizer</h3>
                 <div class="feature-row">
                     <h2>Additive monosynth</h2>
-                    <p>Driven by several audio rate classic oscillators and wavetables which sample the painted canvas with adjustable scan direction and speed based on user specified time or host's BPM multiplier.</p>
-                    <img src="synth_Toolbar.png" alt="" class="widget-large">
+                    <p>Several audio-rate oscillators and wavetables sample the painted canvas. Adjust the scan direction and speed by setting a duration or using a multiplier of the host tempo.</p>
+                    <img src="synth_Toolbar.png" alt="Oscillator and wavetable selection menu" class="widget-large">
                 </div>
                 <div class="feature-row">
                     <h2>AUv3 + MIDI</h2>
-                    <p>Works as standalone app or as an Audio Unit in other hosts; incoming MIDI notes change the base, and base note can be optionally held if no incoming MIDI while the host is running, so the patch can act as a sustained sound for drone like output.</p>
-                    <img src="synth_AUMIDI.png" alt="" class="widget-large">
+                    <p>Use TraceSonic as a standalone app or as an AUv3 instrument in a compatible host. Incoming MIDI notes set the base note. You can hold the base note when no MIDI notes are active, so a patch continues as a sustained drone while the host is running.</p>
+                    <img src="synth_AUMIDI.png" alt="TraceSonic running as an AUv3 instrument with MIDI input" class="widget-large">
                 </div>
                 <div class="feature-row">
                     <h2>Presets</h2>
-                    <p>Handful of builtin patches across multiple thematic groups (Shepard tone included).</p>
-                    <img src="synth_Presets.png" alt="" class="widget-large">
+                    <p>Includes a collection of built-in patches organized into thematic groups, including a Shepard tone.</p>
+                    <img src="synth_Presets.png" alt="TraceSonic factory patch browser" class="widget-large">
                 </div>
             </div>
             <div class="feature available">
                 <h3>Available</h3>
-                as standalone application and AUv3 plugin
+                Available as a standalone app and an AUv3 plug-in.
                 <div class="feature-row">
-                    <h2>on Mac</h2>
-                    <img src="plugin_Mac.png" alt="" class="widget-large">
+                    <h2>Mac</h2>
+                    <img src="plugin_Mac.png" alt="TraceSonic running as an Audio Unit plug-in on Mac" class="widget-large">
                 </div>
                 <div class="feature-row">
-                    <h2>on iPhone</h2>
-                    <img src="plugin_iPhone.png" alt="" class="widget-large">
+                    <h2>iPhone</h2>
+                    <img src="plugin_iPhone.png" alt="TraceSonic running on iPhone" class="widget-large">
                 </div>
                 <div class="feature-row">
-                    <h2>on iPad</h2>
-                    <img src="plugin_iPad.png" alt="" class="widget-large">
+                    <h2>iPad</h2>
+                    <img src="plugin_iPad.png" alt="TraceSonic running as an AUv3 instrument on iPad" class="widget-large">
                 </div>
             </div>
         </div>
         <h2 class="price">$9.99</h2>
         <!-- <small>(* no IAP/ads)</small> -->
-        <small>(* single purchase valid for all supported platforms)</small>
+        <small>One purchase includes all supported platforms.</small>
         <div class="download">
             <a href="https://apps.apple.com/us/app/hollows-of-rogue/id6670699110"><img src="appstorebadge.png" alt="Download on the App Store" width="200"></a>
             <a href="https://apps.apple.com/app/space-pulse-cosmic-glance/id6791366704"><img src="macappstorebadge.png" alt="Download on the Mac App Store" width="200"></a>
         </div>
 
-        <p class="contact">For questions or issues, please reach out on <a href="https://discord.gg/t9cVHhj">Discord</a> (username r618), <a href="https://x.com/r618">X</a>, <a href="https://bsky.app/profile/r618.bsky.social">Bluesky</a>, or <a href="https://www.threads.com/@r618.i">Threads</a>.</p>
+        <p class="contact">For questions or support, contact me on <a href="https://discord.gg/t9cVHhj">Discord</a> (username: r618), <a href="https://x.com/r618">X</a>, <a href="https://bsky.app/profile/r618.bsky.social">Bluesky</a>, or <a href="https://www.threads.com/@r618.i">Threads</a>.</p>
 
     </div>
     <footer>
