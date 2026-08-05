@@ -12,7 +12,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>. x Raster Sonic x .</title>
+    <title>. x Trace Sonic x .</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -112,25 +112,48 @@
             font-size: 2.2rem;
             text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
         }
-        /* pinned to the bottom of its box by the flex column */
-        .price {
-            margin-top: auto;
-            margin-bottom: 0;
-            padding-top: 28px;
-        }
         .feature-row {
             display: grid;
-            grid-template-columns: minmax(0, 300px) 1fr;
-            align-items: center;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            grid-template-areas:
+                "heading text"
+                "image text";
             gap: 20px;
             margin: 28px 0;
             text-align: left;
         }
-        .feature-row img {
+        .feature-row h2 {
+            grid-area: heading;
+            margin: 0;
+            align-self: center;
             justify-self: center;
+            text-align: center;
+        }
+        .feature-row img {
+            grid-area: image;
+            justify-self: center;
+            align-self: center;
             max-width: 100%;
             object-fit: contain;
             cursor: zoom-in;
+        }
+        .feature-row p {
+            grid-area: text;
+            align-self: center;
+            margin: 0;
+            font-size: 1.15rem;
+            font-weight: 500;
+            line-height: 1.4;
+            color: #c5c7cc;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+        }
+        .feature.available .feature-row {
+            grid-template-columns: minmax(0, 1fr);
+            grid-template-areas:
+                "heading"
+                "image";
+            justify-items: center;
+            text-align: center;
         }
         .available-shot {
             width: 100%;
@@ -154,14 +177,11 @@
             height: 260px;
             width: auto;
         }
-        .feature-row p {
-            flex: 1;
-            margin: 0;
-            font-size: 1.15rem;
-            font-weight: 500;
-            line-height: 1.4;
-            color: #c5c7cc;
-            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+        /* pinned to the bottom of its box by the flex column */
+        .price {
+            margin-top: auto;
+            margin-bottom: 0;
+            padding-top: 28px;
         }
         /* own block below the feature boxes, with clear separation */
         .download {
@@ -217,6 +237,10 @@
 
             .feature-row {
                 grid-template-columns: 1fr;
+                grid-template-areas:
+                    "heading"
+                    "image"
+                    "text";
                 justify-items: center;
                 text-align: center;
             }
@@ -225,68 +249,78 @@
 </head>
 <body>
    <header>
-        <h1>.o|o|·|.|&nbsp;&nbsp;x Raster Sonic x&nbsp;&nbsp;|.|·|o|o.</h1>
+        <h1>.o|o|·|.|&nbsp;&nbsp;x Trace Sonic x&nbsp;&nbsp;|.|·|o|o.</h1>
     </header>
     <div class="container">
         <p class="hero-tagline">
-            `Raster Sonic` is an iOS, iPadOS and macOS additive synthetizer which produces audio based on screen pixel data from either images/patterns, or from user's drawings on simple time-frequency grid canvas. It has several fixed oscillator types and wavetables to drive the audio, supports AUv3 and incoming MIDI, handful of factory presets and image patterns which can be also imported by user.
+            `Trace Sonic` is an iOS, iPadOS and macOS experimental additive synthetizer which produces audio based on screen pixel data from images and/or from user's drawings on time-frequency grid canvas. It has several fixed oscillators and wavetables to drive the audio, harmonic brushes, supports AUv3 and incoming MIDI and has handful of factory presets and patterns which can be also imported as images by user.
         </p>
 
         <div class="hero-devices">
-            <img src="mainApp_macOS.png" alt="Raster Sonic main app on Mac" class="device-mac">
-            <img src="mainApp_iOS.png" alt="Raster Sonic main app on iPhone" class="device-iphone">
-            <img src="mainApp_iPadOS.png" alt="Raster Sonic main app on iPad" class="device-ipad">
+            <img src="mainApp_macOS.png" alt="Trace Sonic main app on Mac" class="device-mac">
+            <img src="mainApp_iOS.png" alt="Trace Sonic main app on iPhone" class="device-iphone">
+            <img src="mainApp_iPadOS.png" alt="Trace Sonic main app on iPad" class="device-ipad">
         </div>
 
         <div class="features">
             <div class="feature">
-                <h3>`Painting` Canvas</h3>
+                <h3>Canvas</h3>
                 <div class="feature-row">
-                    <img src="paint_Brushes.png" alt="" class="widget-small">
                     <h2>Paint / Erase</h2>
+                    <img src="canvas_Brushes.png" alt="" class="widget-large">
+                    <p>Use one of predefined brushes to paint over time and frequency bands; harmonic brushes are included and you can paint either freely or snap to currently available pitches. There is Undo/Redo and Eraser with current brush and you can be paiting while eveything is running.
+                    </p>
                 </div>
                 <div class="feature-row">
-                    <img src="paint_Patterns.png" alt="" class="widget-medium">
                     <h2>Patterns</h2>
+                    <img src="canvas_Patterns.png" alt="" class="widget-large">
+                    <p>There are several 'patterns' - canvas paitings - included; some of them are precise harmonic spectral renders suitable for lasting notes, some are more rhythmic and others can be used for audio effects or just pure weirdness or random starting points.</p>
                 </div>
                 <div class="feature-row">
-                    <img src="paint_Canvas.png" alt="" class="widget-config">
-                    <h2>Canvas</h2>
+                    <h2>User images</h2>
+                    <img src="canvas_Images.png" alt="" class="widget-large">
+                    <p>Or import your own images which will then drive the audio..; you can either replace or combine with existing paint when adding a pattern/image. (opened images are converted to grayscale before usage, note that normal photographs are very signal saturated, so they might not sound as you'd expect, but they work.)
+                    </p>
                 </div>
             </div>
             <div class="feature">
-                <h3>Synth</h3>
+                <h3>Synthetizer</h3>
                 <div class="feature-row">
+                    <h2>Additive monosynth</h2>
+                    <p>Driven by several audio rate classic oscillators and wavetables which sample the painted canvas with adjustable scan direction and speed based on user specified time or host's BPM multiplier.</p>
                     <img src="synth_Toolbar.png" alt="" class="widget-large">
-                    <h2>Waveforms/Wavetables, Toolbar</h2>
                 </div>
                 <div class="feature-row">
-                    <img src="synth_AUMIDI.png" alt="" class="widget-small">
                     <h2>AUv3 + MIDI</h2>
+                    <p>Works as standalone app or as an Audio Unit in other hosts; incoming MIDI notes change the base, and base note can be optionally held if no incoming MIDI while the host is running, so the patch can act as a sustained sound for drone like output.</p>
+                    <img src="synth_AUMIDI.png" alt="" class="widget-large">
                 </div>
                 <div class="feature-row">
-                    <img src="synth_Presets.png" alt="" class="widget-large">
                     <h2>Presets</h2>
+                    <p>Handful of builtin patches across multiple thematic groups (Shepard tone included).</p>
+                    <img src="synth_Presets.png" alt="" class="widget-large">
                 </div>
             </div>
-            <div class="feature">
+            <div class="feature available">
                 <h3>Available</h3>
+                as standalone application and AUv3 plugin
                 <div class="feature-row">
-                    <img src="using_Mac.png" alt="" class="widget-large">
-                    <h2>On Mac</h2>
+                    <h2>on Mac</h2>
+                    <img src="plugin_Mac.png" alt="" class="widget-large">
                 </div>
                 <div class="feature-row">
-                    <img src="using_iPhone.png" alt="" class="widget-large">
-                    <h2>On iPhone</h2>
+                    <h2>on iPhone</h2>
+                    <img src="plugin_iPhone.png" alt="" class="widget-large">
                 </div>
                 <div class="feature-row">
-                    <img src="using_iPad.png" alt="" class="widget-large">
-                    <h2>On iPad</h2>
+                    <h2>on iPad</h2>
+                    <img src="plugin_iPad.png" alt="" class="widget-large">
                 </div>
             </div>
         </div>
-        <h2 class="price">$4.99</h2>
-        <small>(* no IAP/ads)</small>
+        <h2 class="price">$8.99</h2>
+        <!-- <small>(* no IAP/ads)</small> -->
+        <small>(* single purchase valid for all supported platforms)</small>
         <div class="download">
             <a href="https://apps.apple.com/us/app/hollows-of-rogue/id6670699110"><img src="appstorebadge.png" alt="Download on the App Store" width="200"></a>
             <a href="https://apps.apple.com/app/space-pulse-cosmic-glance/id6791366704"><img src="macappstorebadge.png" alt="Download on the Mac App Store" width="200"></a>
