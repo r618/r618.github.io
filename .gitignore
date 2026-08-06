@@ -17,3 +17,4 @@ Icon
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
 DerivedData
+.DS_Store
