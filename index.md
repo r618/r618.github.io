@@ -52,6 +52,9 @@ Most of what I make relates to people.
 ### [TraceSonic](https://r618.github.io/TraceSonic/)
 - an experimental additive monosynth interpreting screen pixel data (iOS/iPadOS/macOS)
 
+### [HostSonic μ](https://r618.github.io/HostSonicMicro/)
+- small but capable AU (AudioUnit) hosting application /iPadOS/macOS)
+
 ### @
 - Selected current [work and installations for clients](https://www.youtube.com/channel/UCVdrkPBPUXeglvUY4hqOydA)
 - [Twitter](http://twitter.com/r618)  
