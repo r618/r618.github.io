@@ -256,24 +256,86 @@
             HostSonic μ is an opinionated, but capable AU (Apple's AudioUnit) hosting application for iOS and macOS, which wants to be straightforward and easy to use to allow for quick hosting and listening of plugins/effects and instruments combinations. Its features are deliberately cut, but can still produce and record a complete audio in a DAW-less-like session.
         </p>
 
-<!--         <div class="hero-devices">
+        <div class="hero-devices">
             <img src="mainApp_macOS.png" alt="HostSonic μ main app on Mac" class="device-mac">
             <img src="mainApp_iOS.png" alt="HostSonic μ main app on iPhone" class="device-iphone">
             <img src="mainApp_iPadOS.png" alt="HostSonic μ main app on iPad" class="device-ipad">
         </div>
- -->
-        <br/>
+
+        <iframe width="315" height="560" src="https://www.youtube.com/embed/P3N6b41Om9g?si=cdvMvfUaZbmOGIVo" title="YouTube video player" frameborder="0" allow="accelerometer; 
+        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         <iframe width="560" height="315" src="https://www.youtube.com/embed/HbrZZqhMSnY?si=gc4rdF38Y0mvbJCn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <br/>
-        <br/>
-        <iframe width="315" height="560" src="https://www.youtube.com/embed/P3N6b41Om9g?si=cdvMvfUaZbmOGIVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        <div class="download">
-            <a href="https://github.com/r618/HostSonicMicro-Docs/blob/master/CHANGELOG.md">Changelog</a>
-            <a href="https://github.com/r618/HostSonicMicro-Docs/blob/master/HELP.md">Help doc - also available within the app</a>
-        </div>        
+        <div class="features">
+            <div class="feature">
+                <h3>Host for AUv3/2 plugins</h3>
+                <div class="feature-row">
+                    <h2>Compose with AU plugins</h2>
+                    <img src="host_tracks.png" alt="" class="widget-large">
+                    <p>Four tracks can be individually built up from user's plugins each with its own up to two serial MIDI processors/generators, main Instrument or Audio Input (either device's default microphone input or Ableton Link Audio), and up to three track's effects. Mix them in Mixer with two Sends per track and two main serial Inserts.
+                    </p>
+                </div>
+                <div class="feature-row">
+                    <h2>UI/UX built with emphasis on everything to be accessible and usable quickly and easily</h2>
+                    <img src="host_presets.png" alt="" class="widget-large">
+                    <p>Select plugin's factory preset directly from the track when they are properly exposed. Tapping on loaded AU opens its own fullscreen window. Everything is stored in the session and saved and restored automatically, multiple sessions can be managed via sessions browser/dialog. Audio Inputs can be added directly on each track. All items browsers in the application also remember their position when you open them again.</p>
+                </div>
+                <div class="feature-row">
+                    <h2>Routing and assignable parameters</h2>
+                    <img src="host_routes.png" alt="Image import controls for the TraceSonic canvas" class="widget-large">
+                    <p>Default routing template is ready with two shared Sends for each track and two serial Inserts on master. MIDI In route can be directed to single track (pads also use this track as their target). Assign up to four parameters of any of the loaded AUs to change their values on the main screen.
+                    </p>
+                </div>
+                <div class="feature-row">
+                    <h2>Recording & History Machine</h2>
+                    <img src="host_hm.png" alt="" class="widget-large">
+                    <p>Never loose good found idea via configurabe History Machine which runs continuosly in the background. Normal/immediate Record is next to it. Audio file can be saved via standard OS sharing dialog, has channels + samplerate of default device output in WAV format.
+                    </p>
+                </div>
+            </div>
+            <div class="feature">
+                <h3>MIDI and Ableton Link</h3>
+                <div class="feature-row">
+                    <h2>Sync clock</h2>
+                    <p>MIDI In/Out and Ableton Link are available as external clock sync sources. MIDI sync can use Network Sessions, Network RTP and Bluetooth MIDI, on macOS also configured IAC. You can also open relevant OS settings directly from the app.</p>
+                    <img src="sync_tempo.png" alt="" class="widget-large">
+                </div>
+                <div class="feature-row">
+                    <h2>Send/Receive audio</h2>
+                    <p>Send final mix from mixer and receive from discovered Ableton Link Audio source(s) on each track.</p>
+                    <img src="sync_audio_in.png" alt="" class="widget-large">
+                </div>
+                <div class="feature-row">
+                    <img src="sync_audio_out.png" alt="" class="widget-large">
+                </div>
+                <div class="feature-row">
+                    <h2>Pads</h2>
+                    <p>Pads can be used for testing sending MIDI notes to a track either directly to its instrument or through its MIDI processor. They support pitch bending and MPE.</p>
+                    <img src="sync_pads.png" alt="" class="widget-large">
+                </div>
+            </div>
+            <div class="feature available">
+                <h3>Available</h3>
+                Available as a standalone app and an AUv3 plug-in.
+                <div class="feature-row">
+                    <h2>Mac</h2>
+                    <img src="app_macOS.png" alt="TraceSonic running as an Audio Unit plug-in on Mac" class="widget-large">
+                </div>
+                <div class="feature-row">
+                    <h2>iPhone</h2>
+                    <img src="app_iOS.png" alt="TraceSonic running on iPhone" class="widget-large">
+                </div>
+                <div class="feature-row">
+                    <h2>iPad</h2>
+                    <img src="app_iPadOS.png" alt="TraceSonic running as an AUv3 instrument on iPad" class="widget-large">
+                </div>
+                <a href="https://github.com/r618/TraceSonic-Docs/blob/main/CHANGELOG.md">Changelog</a>
+                <a href="https://github.com/r618/TraceSonic-Docs/blob/main/HELP.md">Help doc - also available within the app</a>
+            </div>
+        </div>
 
-        <h2 class="price">€8.99</h2>
+        <h2 class="price">€9.99</h2>
         <!-- <small>(* no IAP/ads)</small> -->
         <small>One purchase includes all supported platforms.</small>
         <div class="download">
