@@ -12,7 +12,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>. HostSonic μ - a straightforward AudioUnit host for iOS and macOS .</title>
+    <title>:.o HearSonic - live granular sound processor for iOS and macOS o.:</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -249,86 +249,83 @@
 </head>
 <body>
    <header>
-        <h1>:o.&nbsp;&nbsp; HearSonic &nbsp;&nbsp;.:o</h1>
+        <h1>:.o&nbsp;&nbsp; HearSonic &nbsp;&nbsp;o.:</h1>
     </header>
     <div class="container">
         <p class="hero-tagline">
-            HearSonic is an opinionated, but capable AU (Apple's AudioUnit) hosting application for iOS and macOS, which wants to be straightforward and easy to use to allow for quick hosting and listening of plugins/effects and instruments combinations. Its features are deliberately cut, but can still produce and record a complete audio in a DAW-less-like session.
+            HearSonic is a live sound processor for iOS and macOS, made for listening to your surroundings on headphones. I made it because I wanted to recreate now defucnt RjDj app and its scene(s). Microphone input is turned into grains, tuned resonance, echoes, reverb and octave shimmer, shaped mainly by two controls: Tilt and Warp. It also works as an AUv3 effect in a host.
         </p>
 
         <div class="hero-devices">
-            <img src="mainApp_macOS.png" alt="HostSonic μ main app on Mac" class="device-mac">
-            <img src="mainApp_iOS.png" alt="HostSonic μ main app on iPhone" class="device-iphone">
-            <img src="mainApp_iPadOS.png" alt="HostSonic μ main app on iPad" class="device-ipad">
+            <img src="mainApp_macOS.png" alt="HearSonic main screen on Mac" class="device-mac">
+            <img src="mainApp_iOS.png" alt="HearSonic main screen on iPhone" class="device-iphone">
+            <img src="mainApp_iPadOS.png" alt="HearSonic main screen on iPad" class="device-ipad">
         </div>
-
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/Iil6op-orjM?si=JjZ3Vfh2BNuKDV-v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
         <div class="features">
             <div class="feature">
-                <h3>Host for AUv3/2 plugins</h3>
+                <h3>Live granular processor</h3>
                 <div class="feature-row">
-                    <h2>Compose with AU plugins</h2>
-                    <img src="host_tracks.png" alt="" class="widget-large">
-                    <p>Four tracks can be individually built up from user's plugins each with its own up to two serial MIDI processors/generators, main Instrument or Audio Input (either device's default microphone input or Ableton Link Audio), and up to three track's effects. Mix them in Mixer with two Sends per track and two main serial Inserts.
-                    </p>
+                    <h2>Main screen</h2>
+                    <img src="hs_main.png" alt="HearSonic main screen with the Tilt / Warp pad" class="widget-large">
+                    <p>'Tilt' (Dark to Bright) and 'Warp' (short fragments to long grains and feedback). Side strips set low end and harmonics. Hold the bypass button to hear the room as it is temporarily.</p>
                 </div>
                 <div class="feature-row">
-                    <h2>UI/UX built with emphasis on everything to be accessible and usable quickly and easily</h2>
-                    <img src="host_presets.png" alt="" class="widget-large">
-                    <p>Select plugin's factory preset directly from the track when they are properly exposed. Tapping on loaded AU opens its own fullscreen window. Everything is stored in the session and saved and restored automatically, multiple sessions can be managed via sessions browser/dialog. Audio Inputs can be added directly on each track. All items browsers in the application also remember their position when you open them again.</p>
+                    <h2>Sessions and presets</h2>
+                    <img src="hs_sessions.png" alt="Session browser with saved sessions and factory presets" class="widget-large">
+                    <p>Save, load, rename and delete sessions. Factory presets are good starting points for textures, pads and rhythmic fragments, each with a short description.</p>
                 </div>
                 <div class="feature-row">
-                    <h2>Routing and assignable parameters</h2>
-                    <img src="host_routes.png" alt="Image import controls for the TraceSonic canvas" class="widget-large">
-                    <p>Default routing template is ready with two shared Sends for each track and two serial Inserts on master. MIDI In route can be directed to single track (pads also use this track as their target). Assign up to four parameters of any of the loaded AUs to change their values on the main screen.
-                    </p>
+                    <h2>Grain</h2>
+                    <img src="hs_grain.png" alt="Expanded Grain parameters" class="widget-large">
+                    <p>Memory sets grain lookback and tail length. Motion adds scan movement and stereo pulsing. Grain response sets grain level, density and onset sensitivity.</p>
                 </div>
                 <div class="feature-row">
-                    <h2>Recording & History Machine</h2>
-                    <img src="host_hm.png" alt="" class="widget-large">
-                    <p>Never loose good found idea via configurabe History Machine which runs continuosly in the background. Normal/immediate Record is next to it. Audio file can be saved via standard OS sharing dialog, has channels + samplerate of default device output in WAV format.
-                    </p>
+                    <h2>Input</h2>
+                    <img src="hs_input.png" alt="Expanded Input parameters" class="widget-large">
+                    <p>Grit shortens grains and adds saturation. Input mode: Environment for outdoor listening with an output limiter filters lowend noise, Signal accepts entire band mainly when hosted as FX.</p>
+                </div>
+                <div class="feature-row">
+                    <h2>Scale</h2>
+                    <img src="hs_scale.png" alt="Expanded Scale parameters" class="widget-large">
+                    <p>Four chord tones above Resonant pitch tune the resonance and the harmonic wall: Lydian maj7, minor pentatonic m7, harmonic minor m(maj7) or Dorian m6.</p>
                 </div>
             </div>
             <div class="feature">
-                <h3>MIDI and Ableton Link</h3>
+                <h3>MIDI, recording and hosting</h3>
                 <div class="feature-row">
-                    <h2>Sync clock</h2>
-                    <p>MIDI In/Out and Ableton Link are available as external clock sync sources. MIDI sync can use Network Sessions, Network RTP and Bluetooth MIDI, on macOS also configured IAC. You can also open relevant OS settings directly from the app.</p>
-                    <img src="sync_tempo.png" alt="" class="widget-large">
+                    <h2>MIDI In</h2>
+                    <p>Notes set the chord root for resonance, play captured audio as pitched grains (velocity, pitch bend, pressure, MPE, CC 74 scrubs), or gate Echo, Space or Fragments while held.</p>
+                    <img src="hs_midi.png" alt="MIDI Notes control options in Settings" class="widget-large">
                 </div>
                 <div class="feature-row">
-                    <h2>Send/Receive audio</h2>
-                    <p>Send final mix from mixer and receive from discovered Ableton Link Audio source(s) on each track.</p>
-                    <img src="sync_audio_in.png" alt="" class="widget-large">
+                    <h2>History Machine and Record</h2>
+                    <p>History Machine keeps the last 15 to 300 seconds of processed output, so a take can start before you press the button. Record starts from now. Stereo 24-bit WAV, saved via the system dialog.</p>
+                    <img src="hs_hm.png" alt="History Machine and Record buttons with buffer settings" class="widget-large">
                 </div>
                 <div class="feature-row">
-                    <img src="sync_audio_out.png" alt="" class="widget-large">
-                </div>
-                <div class="feature-row">
-                    <h2>Pads</h2>
-                    <p>Pads can be used for testing sending MIDI notes to a track either directly to its instrument or through its MIDI processor. They support pitch bending and MPE.</p>
-                    <img src="sync_pads.png" alt="" class="widget-large">
+                    <h2>AUv3 in a host</h2>
+                    <p>Use it as an effect on instruments, tracks or audio files in any AUv3 host (here HostSonic μ on Mac). Host transport starts and stops processing, host bypass works like the bypass button.</p>
+                    <img src="hs_hosted.png" alt="HearSonic AUv3 open in HostSonic μ on Mac" class="widget-large">
                 </div>
             </div>
             <div class="feature available">
                 <h3>Available</h3>
-                Available as a standalone app and an AUv3 plug-in.
+                Available as a standalone app and an AUv3 effect.
                 <div class="feature-row">
                     <h2>Mac</h2>
-                    <img src="app_macOS.png" alt="TraceSonic running as an Audio Unit plug-in on Mac" class="widget-large">
+                    <img src="app_macOS.png" alt="HearSonic standalone app on Mac" class="widget-large">
                 </div>
                 <div class="feature-row">
                     <h2>iPhone</h2>
-                    <img src="app_iOS.png" alt="TraceSonic running on iPhone" class="widget-large">
+                    <img src="app_iOS.png" alt="HearSonic standalone app on iPhone" class="widget-large">
                 </div>
                 <div class="feature-row">
                     <h2>iPad</h2>
-                    <img src="app_iPadOS.png" alt="TraceSonic running as an AUv3 instrument on iPad" class="widget-large">
+                    <img src="app_iPadOS.png" alt="HearSonic standalone app on iPad" class="widget-large">
                 </div>
-                <a href="https://github.com/r618/TraceSonic-Docs/blob/main/CHANGELOG.md">Changelog</a>
-                <a href="https://github.com/r618/TraceSonic-Docs/blob/main/HELP.md">Help doc - also available within the app</a>
+                <a href="https://github.com/r618/HearSonic-Docs/blob/main/CHANGELOG.md">Changelog</a>
+                <a href="https://github.com/r618/HearSonic-Docs/blob/main/HELP.md">Help doc - also available within the app</a>
             </div>
         </div>
 
@@ -340,7 +337,7 @@
             <a href="https://apps.apple.com/app/tracesonic/id6798317938"><img src="macappstorebadge.png" alt="Download on the Mac App Store" width="200"></a>
         </div>
 
-        <p class="contact">For questions or support, contact me on <a href="https://x.com/r618">X</a>, <a href="https://bsky.app/profile/r618.bsky.social">Bluesky</a>, or <a href="https://www.threads.com/@r618.i">Threads</a>.<a href="https://forum.loopypro.com/discussion/69596/hostsonic-%CE%BC-auv3-v2-host/">You can check out also loopypro/audiobus forums.</a></p>
+        <p class="contact">For questions or support, contact me on <a href="https://x.com/r618">X</a>, <a href="https://bsky.app/profile/r618.bsky.social">Bluesky</a>, or <a href="https://www.threads.com/@r618.i">Threads</a>.<a href="https://forum.loopypro.com/discussion/69864/o-hearsonic-o-a-live-processor-for-outside-but-not-only/">You can check out also loopypro/audiobus forums.</a></p>
 
     </div>
     <footer>
