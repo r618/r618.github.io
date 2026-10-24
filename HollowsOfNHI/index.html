@@ -4,134 +4,444 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hollows Of NHI</title>
+    <meta name="description" content="A disclosure roguelike. Enter a secret cover-up complex, find the Archives of Disclosure and get out.">
+    <meta property="og:title" content="Hollows Of NHI">
+    <meta property="og:description" content="A disclosure roguelike for iPhone, iPad and Mac.">
+    <meta property="og:image" content="https://r618.github.io/HollowsOfNHI/v2/01_title_saved_game.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --paper: #ebe9e1;
+            --ink: #0b0c0b;
+            --phosphor: #4dff7c;
+            --green: #1f8a24;
+            --dim: #5d625c;
+            --rule: 3px solid var(--ink);
+        }
+        * { box-sizing: border-box; }
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #222;
-            color: #fff;
-            text-align: center;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+            font-size: 16px;
+            line-height: 1.5;
         }
-        .container {
-            padding: 20px;
-        }
-        header {
-            background-color: #333;
-            padding: 20px 0;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+        a { color: inherit; }
+        img { display: block; max-width: 100%; }
+        .wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
 
-        .main-image {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #222;
+        /* terminal header */
+        .term {
+            background: var(--ink);
+            color: var(--phosphor);
+            border-bottom: 8px solid var(--green);
         }
-
-        .main-image::before {
-            content: "";
-            display: block;
-            padding-top: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
-        }
-
-        .main-image img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .features {
+        .strip {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
-            margin-top: 20px;
-        }
-        .feature {
-            width: 30%;
-            background-color: #222;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .feature h3 {
-            margin-top: 0;
-        }
-        .cta-button {
-            display: block;
-            width: 200px;
-            margin: auto;
-            padding: 15px;
-            background-color: #222;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-        }
-        footer {
-            background-color: #333;
+            gap: 4px 24px;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #1d3a22;
             padding: 10px 0;
-            margin-top: 40px;
+            color: #8fbf98;
         }
-        footer p {
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1.25fr;
+            gap: 40px;
+            align-items: center;
+            padding: 48px 0 56px;
+        }
+        .hero h1 {
             margin: 0;
+            font-size: clamp(3rem, 9vw, 6.5rem);
+            line-height: 0.9;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .hero .lede {
+            color: #d9f5de;
+            font-size: 1.05rem;
+            margin: 24px 0 28px;
+            max-width: 32ch;
+        }
+        .cursor {
+            display: inline-block;
+            width: 0.6em;
+            height: 1.05em;
+            margin-left: 4px;
+            background: var(--phosphor);
+            vertical-align: text-bottom;
+            animation: blink 1.1s steps(1) infinite;
+        }
+        .nowrap { white-space: nowrap; }
+        @keyframes blink { 50% { opacity: 0; } }
+        @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+        .hero-shot {
+            border: 3px solid var(--phosphor);
+            box-shadow: 10px 10px 0 var(--green);
+        }
+
+        .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+        .btn {
+            display: inline-block;
+            padding: 12px 18px;
+            border: 3px solid var(--phosphor);
+            color: var(--phosphor);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
             font-size: 0.9rem;
         }
-        @media screen and (max-width: 768px) {
-            .features, .screenshots {
-                flex-direction: column;
-            }
+        .btn small { display: block; font-weight: 400; text-transform: none; letter-spacing: 0; opacity: 0.75; }
+        .btn:hover, .btn:focus-visible { background: var(--phosphor); color: var(--ink); outline: none; }
+        .paper .btn { border-color: var(--ink); color: var(--ink); }
+        .paper .btn:hover, .paper .btn:focus-visible { background: var(--ink); color: var(--paper); }
 
-            .feature, .screenshot {
-                width: 100%;
-                margin-bottom: 10px;
-            }
+        /* document sections */
+        section { border-top: var(--rule); padding: 28px 0 56px; }
+        section:first-child { border-top: 0; }
+        .sec-head {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0 20px;
+            align-items: baseline;
+            margin-bottom: 28px;
+        }
+        .sec-head .no {
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1;
+        }
+        .sec-head h2 {
+            margin: 0;
+            font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+        }
+        .sec-head p { grid-column: 2; margin: 4px 0 0; color: var(--dim); }
+
+        .cols {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .card {
+            border: var(--rule);
+            background: #f6f5f0;
+            box-shadow: 6px 6px 0 var(--ink);
+            display: flex;
+            flex-direction: column;
+        }
+        .card .tag {
+            align-self: flex-start;
+            background: var(--ink);
+            color: var(--paper);
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            padding: 3px 10px;
+        }
+        .card h3 { margin: 14px 16px 6px; font-size: 1.1rem; text-transform: uppercase; }
+        .card p { margin: 0 16px 16px; flex: 1; }
+        .card .shot img { border-top: var(--rule); width: 100%; }
+
+        .redact {
+            background: var(--ink);
+            color: transparent;
+            user-select: none;
+            padding: 0 2px;
+        }
+
+        .also { margin: 28px 0 0; color: var(--dim); }
+
+        /* entities */
+        .entities {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 32px;
+            align-items: start;
+            position: relative;
+        }
+        table { width: 100%; border-collapse: collapse; border: var(--rule); background: #f6f5f0; }
+        th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--ink); vertical-align: top; }
+        th { background: var(--ink); color: var(--paper); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+        td:first-child { font-weight: 700; }
+        tr:last-child td { border-bottom: 0; }
+        .note { font-size: 0.85rem; color: var(--dim); margin-top: 10px; }
+        .stamp {
+            position: absolute;
+            right: 8px;
+            top: -18px;
+            transform: rotate(-6deg);
+            border: 4px solid var(--green);
+            color: var(--green);
+            padding: 4px 12px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            background: rgba(235, 233, 225, 0.85);
+            pointer-events: none;
+        }
+        .framed { border: var(--rule); box-shadow: 6px 6px 0 var(--ink); }
+
+        .footage {
+            display: grid;
+            grid-template-columns: minmax(0, 360px) 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+        .video {
+            position: relative;
+            aspect-ratio: 9 / 16;
+            background: var(--ink);
+            border: var(--rule);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+        .log { border: var(--rule); background: #f6f5f0; }
+        .log div { display: grid; grid-template-columns: 9ch 1fr; gap: 12px; padding: 9px 12px; border-bottom: 1px solid var(--ink); }
+        .log div:last-child { border-bottom: 0; }
+        .log b { text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.06em; padding-top: 2px; }
+
+        .devices {
+            background: var(--ink);
+            border: var(--rule);
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+        }
+        .gallery a { text-decoration: none; display: block; border: var(--rule); background: var(--ink); }
+        .gallery img { aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
+        .gallery span {
+            display: block;
+            background: var(--paper);
+            border-top: var(--rule);
+            padding: 6px 10px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .gallery a:hover span, .gallery a:focus-visible span { background: var(--ink); color: var(--phosphor); }
+
+        dialog { padding: 0; border: 3px solid var(--phosphor); background: var(--ink); max-width: 96vw; max-height: 96vh; }
+        dialog::backdrop { background: rgba(0, 0, 0, 0.9); }
+        dialog img { max-width: calc(96vw - 6px); max-height: calc(92vh - 6px); cursor: zoom-out; }
+
+        footer {
+            background: var(--ink);
+            color: #b9c4bb;
+            font-size: 0.85rem;
+            padding: 28px 0;
+            border-top: 8px solid var(--green);
+        }
+        footer .wrap { display: grid; gap: 8px; }
+        footer a { color: var(--phosphor); }
+
+        @media (max-width: 860px) {
+            .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 32px; }
+            .cols { grid-template-columns: 1fr; }
+            .entities { grid-template-columns: 1fr; }
+            .footage { grid-template-columns: 1fr; }
+            .gallery { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .video { max-width: 360px; width: 100%; }
+            .stamp { position: static; justify-self: start; margin: 0 0 -8px 8px; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>.o Hollows Of NHI o.</h1>
-    </header>
-    <div class="container">
-        <img src="PR01.png" alt="Hollows of NHI promotional artwork" class="main-image">
-        <div class="features">
-            <div class="feature">
-                <h3></h3>
-                <iframe height="320" src="https://youtube.com/embed/wsSJ2CKe4cA?controls=1" class="main-image">
-                </iframe>                
+    <header class="term">
+        <div class="wrap">
+            <div class="strip">
+                <span>File: HoNHI / rev 2.0</span>
+                <span>Clearance: public</span>
+                <span>Issued by: r618</span>
             </div>
-            <div class="feature">
-                <h3>"A Disclosure Rogue"</h3>
-                <p>A traditional roguelike in which you enter a secret cover-up complex to expose a UFO conspiracy. Descend through a dark procedural facility filled with secrets, symbols, and non-human intelligences. Find the Archives of Disclosure, escape, and reveal the truth to the world&mdash;or die trying. This modern adaptation of a timeless classic adds new graphics, sound, ambience, and music. Available on desktop, mobile, and tablet devices.</p>
-                <img src="SCR00.png" alt="Hollows of NHI gameplay inside the secret complex" class="main-image">
-            </div>
-            <div class="feature">
-                <h3>Touchscreen and desktop controls</h3>
-                <p>On a touchscreen, swipe to move, pinch to zoom, and drag to pan around the complex. You can also use a virtual D-pad, with one-finger controls for zooming and panning. Both portrait and landscape orientations are supported. Access every command through modal menus or use the keyboard on desktop. Quick-action buttons provide access to common commands, including automatic navigation to the exit.</p>
-                <img src="SCR01.png" alt="Hollows of NHI touchscreen controls and complex view" class="main-image">
+            <div class="hero">
+                <div>
+                    <h1>Hollows<br>of NHI</h1>
+                    <p class="lede">A disclosure roguelike. Enter the cover-up complex, find the Archives of Disclosure, get <span class="nowrap">out.<span class="cursor"></span></span></p>
+                    <div class="btns">
+                        <a class="btn" href="https://apps.apple.com/us/app/hollows-of-nhi/id6748883192">App Store<small>iPhone &amp; iPad</small></a>
+                        <a class="btn" href="https://apps.apple.com/us/app/hollows-of-nhi-desktop-ed/id6748883362">Mac App Store<small>Desktop edition</small></a>
+                    </div>
+                </div>
+                <img class="hero-shot" src="v2/01_title_saved_game.jpg" alt="Hollows of NHI title screen">
             </div>
         </div>
-        <p>Tiles by Oryx</p>
-        <!--
-            a       class="cta-button"
-            img     class="main-image"
-         -->
-        <a href="https://apps.apple.com/us/app/hollows-of-nhi/id6748883192" ><img src="appstorebadge.png" alt="Download Hollows of NHI on the App Store" width="200px"></a>
-        <a href="https://apps.apple.com/us/app/hollows-of-nhi-desktop-ed/id6748883362" ><img src="macappstorebadge.png" alt="Download Hollows of NHI on the Mac App Store" width="200px"></a>
-        
-        <!-- <a href=""><img src="itchio.png" alt="" alt="" width="200"></a> -->
-        <br><br>For questions or support, please use <a href="https://discord.gg/t9cVHhj">Roguelikes Discord</a> (username: r618), <a href="https://x.com/r618">X</a>, <a href="https://bsky.app/profile/r618.bsky.social">Bluesky</a>, or <a href="https://www.threads.com/@r618.i">Threads</a>.
+    </header>
 
-    </div>
+    <main class="paper">
+        <div class="wrap">
+            <section>
+                <div class="sec-head">
+                    <span class="no">01</span>
+                    <h2>Briefing</h2>
+                </div>
+                <div class="cols">
+                    <div class="card">
+                        <span class="tag">01.1</span>
+                        <h3>A disclosure rogue</h3>
+                        <p>A traditional roguelike in a secret UFO facility. Procedural floors, symbols, non-human intelligences. Permadeath applies. So does the NDA.</p>
+                        <a class="shot" href="v2/02_deep_level.jpg"><img src="v2/02_deep_level.jpg" alt="Agent meeting a zeta reticuli archon" loading="lazy"></a>
+                    </div>
+                    <div class="card">
+                        <span class="tag">01.2</span>
+                        <h3>Touch and keyboard</h3>
+                        <p>Swipe, pinch and drag, or use the D-pad. Full keyboard on Mac. Portrait or landscape.</p>
+                        <a class="shot" href="v2/03_dpad.jpg"><img src="v2/03_dpad.jpg" alt="Virtual D-pad in a corridor" loading="lazy"></a>
+                    </div>
+                    <div class="card">
+                        <span class="tag">01.3</span>
+                        <h3>Your rules</h3>
+                        <p>Turn off dark rooms, secret doors or unidentified items. Seeded runs, undo, optional hunger.</p>
+                        <a class="shot" href="v2/09_gameplay_options.jpg"><img src="v2/09_gameplay_options.jpg" alt="Gameplay options screen" loading="lazy"></a>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="sec-head">
+                    <span class="no">02</span>
+                    <h2>Revision 2.0</h2>
+                </div>
+                <div class="cols">
+                    <div class="card">
+                        <span class="tag">02.1</span>
+                        <h3>Field notes</h3>
+                        <p>Your agent comments on what he finds. A zeta reticuli archon? Logged.</p>
+                        <a class="shot" href="v2/06_zoo_treasure_room.jpg"><img src="v2/06_zoo_treasure_room.jpg" alt="A room full of entities converging on the agent" loading="lazy"></a>
+                    </div>
+                    <div class="card">
+                        <span class="tag">02.2</span>
+                        <h3>Online dataports</h3>
+                        <p>Terminals show news from outside, slightly corrupted. Reading is optional. Believing, even more so.</p>
+                        <a class="shot" href="v2/04_online_dataport.jpg"><img src="v2/04_online_dataport.jpg" alt="Agent reading a dataport terminal" loading="lazy"></a>
+                    </div>
+                    <div class="card">
+                        <span class="tag">02.3</span>
+                        <h3>Records on file</h3>
+                        <p>Floors, entities neutralized, E115 recovered, turns. New bests are noted, even posthumously.</p>
+                        <a class="shot" href="v2/10_rip.jpg"><img src="v2/10_rip.jpg" alt="Tombstone with run records" loading="lazy"></a>
+                    </div>
+                </div>
+                <p class="also">Also: minimap, livelier floors, faster movement and many fixes.</p>
+            </section>
+
+            <section>
+                <div class="sec-head">
+                    <span class="no">03</span>
+                    <h2>Known entities</h2>
+                </div>
+                <div class="entities">
+                    <span class="stamp">Partially declassified</span>
+                    <div>
+                        <table>
+                            <thead><tr><th>Designation</th><th>Notes</th></tr></thead>
+                            <tbody>
+                                <tr><td>Abductron</td><td>Deals no damage. Disrupts non-biological protection.</td></tr>
+                                <tr><td>CE5 scout drone</td><td>Glowing. Origin unknown.</td></tr>
+                                <tr><td>Zeta reticuli archon</td><td><span class="redact">Not in the brief at all</span></td></tr>
+                                <tr><td>Reptilian</td><td><span class="redact">First contact protocol</span></td></tr>
+                                <tr><td>X/trickster</td><td><span class="redact">Classified data</span></td></tr>
+                                <tr><td>Majestic 12</td><td><span class="redact">This entry does not exist</span></td></tr>
+                                <tr><td>Werewolf</td><td>Yes, really.</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="note">Full entries in game, under Help &rarr; Entities. No clearance needed.</p>
+                    </div>
+                    <a class="shot" href="v2/08_help_entities.jpg"><img class="framed" src="v2/08_help_entities.jpg" alt="In-game entity help screen" loading="lazy"></a>
+                </div>
+            </section>
+
+            <section>
+                <div class="sec-head">
+                    <span class="no">04</span>
+                    <h2>Field footage</h2>
+                </div>
+                <div class="footage">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/wsSJ2CKe4cA" title="Hollows of NHI gameplay video" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="log">
+                        <div><b>Format</b><span>Vertical. Phone-sized, like most leaks.</span></div>
+                        <div><b>Subject</b><span>Level 1 gameplay, mobile.</span></div>
+                        <div><b>Edits</b><span>None reported.</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="sec-head">
+                    <span class="no">05</span>
+                    <h2>Devices</h2>
+                    <p>iPhone, iPad and Mac. Same complex, same paperwork.</p>
+                </div>
+                <div class="devices">
+                    <img src="v2/devices.jpg" alt="Hollows of NHI on iPhone, iPad and Mac" loading="lazy">
+                </div>
+                <div class="btns">
+                    <a class="btn" href="https://apps.apple.com/us/app/hollows-of-nhi/id6748883192">App Store<small>iPhone &amp; iPad</small></a>
+                    <a class="btn" href="https://apps.apple.com/us/app/hollows-of-nhi-desktop-ed/id6748883362">Mac App Store<small>Desktop edition</small></a>
+                </div>
+                <!-- <a href=""><img src="itchio.png" alt="" alt="" width="200"></a> -->
+            </section>
+
+            <section>
+                <div class="sec-head">
+                    <span class="no">06</span>
+                    <h2>Evidence</h2>
+                </div>
+                <div class="gallery">
+                    <a href="v2/01_title_saved_game.jpg"><img src="v2/01_title_saved_game.jpg" alt="Title screen with a saved game" loading="lazy"><span>Exhibit A &mdash; Title</span></a>
+                    <a href="v2/02_deep_level.jpg"><img src="v2/02_deep_level.jpg" alt="Floor 12 with a zeta reticuli archon" loading="lazy"><span>Exhibit B &mdash; Floor 12</span></a>
+                    <a href="v2/03_dpad.jpg"><img src="v2/03_dpad.jpg" alt="First contact with a reptilian" loading="lazy"><span>Exhibit C &mdash; First contact</span></a>
+                    <a href="v2/04_online_dataport.jpg"><img src="v2/04_online_dataport.jpg" alt="Online dataport terminal" loading="lazy"><span>Exhibit D &mdash; Dataport</span></a>
+                    <a href="v2/05_inventory.jpg"><img src="v2/05_inventory.jpg" alt="Inventory screen" loading="lazy"><span>Exhibit E &mdash; Inventory</span></a>
+                    <a href="v2/06_zoo_treasure_room.jpg"><img src="v2/06_zoo_treasure_room.jpg" alt="Room full of entities" loading="lazy"><span>Exhibit F &mdash; Crowded room</span></a>
+                    <a href="v2/07_high_contrast.jpg"><img src="v2/07_high_contrast.jpg" alt="High-contrast display" loading="lazy"><span>Exhibit G &mdash; High contrast</span></a>
+                    <a href="v2/08_help_entities.jpg"><img src="v2/08_help_entities.jpg" alt="Entity help screen" loading="lazy"><span>Exhibit H &mdash; Entities</span></a>
+                    <a href="v2/09_gameplay_options.jpg"><img src="v2/09_gameplay_options.jpg" alt="Gameplay options" loading="lazy"><span>Exhibit I &mdash; Options</span></a>
+                    <a href="v2/10_rip.jpg"><img src="v2/10_rip.jpg" alt="Tombstone with run records" loading="lazy"><span>Exhibit J &mdash; Rest in peace</span></a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <dialog id="viewer"><img alt=""></dialog>
+
     <footer>
-        <p>&copy; 2024&ndash;present <a href="https://r618.github.io/">Martin Cvengroš</a> (<a href="privacypolicy.txt">Privacy policy</a>)<img src="//ipv4.games/claim/r618" alt=""></p>
+        <div class="wrap">
+            <span>Tiles by Oryx.</span>
+            <span>Questions or support: <a href="https://discord.gg/t9cVHhj">Roguelikes Discord</a> (r618), <a href="https://x.com/r618">X</a>, <a href="https://bsky.app/profile/r618.bsky.social">Bluesky</a>, <a href="https://www.threads.com/@r618.i">Threads</a>.</span>
+            <span>&copy; 2024&ndash;present <a href="https://r618.github.io/">Martin Cvengroš</a> &middot; <a href="privacypolicy.txt">Privacy policy</a><img src="//ipv4.games/claim/r618" alt="" style="display:inline"></span>
+        </div>
     </footer>
+
+    <script>
+        const viewer = document.getElementById('viewer');
+        const viewerImg = viewer.querySelector('img');
+        document.querySelectorAll('.gallery a, a.shot').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                viewerImg.src = a.getAttribute('href');
+                viewerImg.alt = a.querySelector('img').alt;
+                viewer.showModal();
+            });
+        });
+        viewer.addEventListener('click', () => viewer.close());
+    </script>
 </body>
 </html>
