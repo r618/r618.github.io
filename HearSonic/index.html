@@ -253,7 +253,7 @@
     </header>
     <div class="container">
         <p class="hero-tagline">
-            HearSonic is a live sound processor for iOS and macOS, made for listening to your surroundings on headphones. I made it because I wanted to recreate now defucnt RjDj app and its scene(s). Microphone input is turned into grains, tuned resonance, echoes, reverb and octave shimmer, shaped mainly by two controls: Tilt and Warp. It also works as an AUv3 effect in a host.
+            HearSonic is a live sound processor for iPhone, iPad and Mac, made for listening to your surroundings on headphones. Live input becomes grains, tuned resonance, echoes, reverb and octave shimmer, shaped by Tilt and Warp and many other parameters. It also works as an AUv3 effect on instruments and and has recording capability.
         </p>
 
         <div class="hero-devices">
@@ -268,46 +268,46 @@
             <div class="feature">
                 <h3>Live granular processor</h3>
                 <div class="feature-row">
-                    <h2>Main screen</h2>
+                    <h2>Tilt, Warp and device motion</h2>
                     <img src="hs_main.png" alt="HearSonic main screen with the Tilt / Warp pad" class="widget-large">
-                    <p>'Tilt' (Dark to Bright) and 'Warp' (short fragments to long grains and feedback). Side strips set low end and harmonics. Hold the bypass button to hear the room as it is temporarily.</p>
+                    <p>Tilt ranges from slow, bass-heavy grains through tuned resonance to harmonics and shimmer. Warp adds longer grains, time scatter, reversals and spectral feedback. The side strips control Low weight and Harmonics.<br><br>On devices with motion sensors, Motion lets gravity move the ball and both controls. Pin centre sets its resting position; a long press resets it. Bypass passes dry input while processing continues, and Panic clears the buffers and stops standalone audio.</p>
                 </div>
                 <div class="feature-row">
                     <h2>Sessions and presets</h2>
                     <img src="hs_sessions.png" alt="Session browser with saved sessions and factory presets" class="widget-large">
-                    <p>Save, load, rename and delete sessions. Factory presets are good starting points for textures, pads and rhythmic fragments, each with a short description.</p>
+                    <p>Sessions keep the full setup, with automatic restoration of the current session on launch. The browser handles saved sessions and factory presets for textures, pads and rhythmic fragments. Presets leave Output gain, Input mode and MIDI mapping as they are. In a host, the session is saved with the project.</p>
                 </div>
                 <div class="feature-row">
                     <h2>Grain</h2>
                     <img src="hs_grain.png" alt="Expanded Grain parameters" class="widget-large">
-                    <p>Memory sets grain lookback and tail length. Motion adds scan movement and stereo pulsing. Grain response sets grain level, density and onset sensitivity.</p>
+                    <p>Memory determines grain lookback and effect decay. The Grain group's Motion parameter adds scanning, stereo movement and pulsing, independently of device motion. Grain response controls level, density and onset sensitivity. Parameter descriptions are available in the app.</p>
                 </div>
                 <div class="feature-row">
-                    <h2>Input</h2>
+                    <h2>Input and output</h2>
                     <img src="hs_input.png" alt="Expanded Input parameters" class="widget-large">
-                    <p>Grit shortens grains and adds saturation. Input mode: Environment for outdoor listening with an output limiter filters lowend noise, Signal accepts entire band mainly when hosted as FX.</p>
+                    <p>Environment mode adapts to input activity and limits output peaks; Signal accepts quiet sources without output limiting. The standalone app defaults to Environment, the plug-in to Signal.<br><br>Input trim sits before processing. Grit adds saturation and shorter, denser fragments, with Dry / wet and Output gain controlling the final mix.</p>
                 </div>
                 <div class="feature-row">
                     <h2>Scale</h2>
                     <img src="hs_scale.png" alt="Expanded Scale parameters" class="widget-large">
-                    <p>Four chord tones above Resonant pitch tune the resonance and the harmonic wall: Lydian maj7, minor pentatonic m7, harmonic minor m(maj7) or Dorian m6.</p>
+                    <p>Resonance and the harmonic wall follow a four-note chord rooted at Resonant pitch: Lydian maj7, minor pentatonic m7, harmonic minor m(maj7) or Dorian m6. The Harmonics strip brings in the wall at any Tilt position.</p>
                 </div>
             </div>
             <div class="feature">
                 <h3>MIDI, recording and hosting</h3>
                 <div class="feature-row">
                     <h2>MIDI In</h2>
-                    <p>Notes set the chord root for resonance, play captured audio as pitched grains (velocity, pitch bend, pressure, MPE, CC 74 scrubs), or gate Echo, Space or Fragments while held.</p>
+                    <p>MIDI notes can set resonance pitch, transpose grains, control both, or tune and gate resonance and the harmonic wall. Echo, Space and Fragments have gate modes too. Velocity controls gated levels, sustain holds gates, and tails continue after release.<br><br>Grain playback supports velocity, pitch bend, pressure and MPE, with CC74 moving through captured audio. The standalone app receives connected MIDI sources; the plug-in receives MIDI from its host.</p>
                     <img src="hs_midi.png" alt="MIDI Notes control options in Settings" class="widget-large">
                 </div>
                 <div class="feature-row">
                     <h2>History Machine and Record</h2>
-                    <p>History Machine keeps the last 15 to 300 seconds of processed output, so a take can start before you press the button. Record starts from now. Stereo 24-bit WAV, saved via the system dialog.</p>
+                    <p>History Machine adds buffered output to the beginning of a recording, with 15 to 300 seconds of history and a 60-second default. Record starts a take immediately. Both are standalone features and save stereo audio through the system dialog.<br><br>Formats are AAC/M4A at 256 kbps (default) and lossless 24-bit FLAC, with estimated file size shown in Settings. AAC converts processing rates above 48 kHz to 44.1 or 48 kHz.</p>
                     <img src="hs_hm.png" alt="History Machine and Record buttons with buffer settings" class="widget-large">
                 </div>
                 <div class="feature-row">
                     <h2>AUv3 in a host</h2>
-                    <p>Use it as an effect on instruments, tracks or audio files in any AUv3 host (here HostSonic μ on Mac). Host transport starts and stops processing, host bypass works like the bypass button.</p>
+                    <p>As an AUv3 effect, HearSonic processes instruments, tracks and recordings in a compatible host, including HostSonic μ on Mac. Audio, MIDI and sample rate come from the host; bypass keeps the effect running underneath the dry signal.<br><br>The standalone app supports the device rate or a selected 44.1, 48 or 96 kHz.</p>
                     <img src="hs_hosted.png" alt="HearSonic AUv3 open in HostSonic μ on Mac" class="widget-large">
                 </div>
             </div>

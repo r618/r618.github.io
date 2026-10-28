@@ -253,7 +253,7 @@
     </header>
     <div class="container">
         <p class="hero-tagline">
-            HostSonic μ is an opinionated, but capable AU (Apple's AudioUnit) hosting application for iOS and macOS, which wants to be straightforward and easy to use to allow for quick hosting and listening of plugins/effects and instruments combinations. Its features are deliberately cut, but can still produce and record a complete audio in a DAW-less-like session.
+            HostSonic μ is a straightforward, focused Audio Unit host for iPhone, iPad and Mac. Quickly combine instruments, MIDI processors, effects, live input and audio or MIDI files across four tracks, its features are deliberately cut, but cat still produce and record a complete mix in a DAW-less-like session.
         </p>
 
         <div class="hero-devices">
@@ -269,69 +269,67 @@
 
         <div class="features">
             <div class="feature">
-                <h3>Host for AUv3/2 plugins</h3>
+                <h3>Host for Audio Unit plug-ins</h3>
                 <div class="feature-row">
-                    <h2>Compose with AU plugins</h2>
+                    <h2>Four tracks, plug-ins and files</h2>
                     <img src="host_tracks.png" alt="" class="widget-large">
-                    <p>Four tracks can be individually built up from user's plugins each with its own up to two serial MIDI processors/generators, main Instrument or Audio Input (either device's default microphone input or Ableton Link Audio), and up to three track's effects. Mix them in Mixer with two Sends per track and two main serial Inserts.
-                    </p>
+                    <p>Four tracks, each with up to two MIDI processors or generators, one instrument or audio source, and three effects. AUv3 is supported across all platforms, with AUv2 also available on Mac. Sources include device input, Link Audio and audio files.<br><br>File playback has a waveform, start position and looping, and follows the host transport. WAV, AIFF, CAF, MP3, AAC/M4A, ALAC and FLAC are supported, along with other formats the system can decode. Standard MIDI files can play through the bundled GeneralUser GS bank, including program changes and channel 10 drums.</p>
                 </div>
                 <div class="feature-row">
-                    <h2>UI/UX built with emphasis on everything to be accessible and usable quickly and easily</h2>
+                    <h2>Quick access and open sessions</h2>
                     <img src="host_presets.png" alt="" class="widget-large">
-                    <p>Select plugin's factory preset directly from the track when they are properly exposed. Tapping on loaded AU opens its own fullscreen window. Everything is stored in the session and saved and restored automatically, multiple sessions can be managed via sessions browser/dialog. Audio Inputs can be added directly on each track. All items browsers in the application also remember their position when you open them again.</p>
+                    <p>Factory presets are available directly on the slot when a plug-in exposes them, with the plug-in's editor a tap away. The current session saves automatically and returns on relaunch; saved sessions have their own browser.<br><br>Sessions use an open format: ordinary folders with readable Session.json and standard .aupreset files, preserving plug-in states and macro assignments. They can be browsed, copied and backed up in Files or Finder. Imported audio and MIDI files are stored separately in Audio Files and need to accompany a session moved to another device.</p>
                 </div>
                 <div class="feature-row">
                     <h2>Routing and assignable parameters</h2>
-                    <img src="host_routes.png" alt="Image import controls for the TraceSonic canvas" class="widget-large">
-                    <p>Default routing template is ready with two shared Sends for each track and two serial Inserts on master. MIDI In route can be directed to single track (pads also use this track as their target). Assign up to four parameters of any of the loaded AUs to change their values on the main screen.
-                    </p>
+                    <img src="host_routes.png" alt="HostSonic send, master insert and parameter assignment controls" class="widget-large">
+                    <p>The mixer has two shared sends with per-track levels and two serial master inserts. External MIDI and pads target one selected track. MIDI processors feed the instrument and MIDI-enabled effects, including effects on device input and Link Audio tracks. Four assignable macro sliders expose parameters from any loaded plug-in on the main screen.</p>
                 </div>
                 <div class="feature-row">
                     <h2>Recording & History Machine</h2>
                     <img src="host_hm.png" alt="" class="widget-large">
-                    <p>Never loose good found idea via configurabe History Machine which runs continuosly in the background. Normal/immediate Record is next to it. Audio file can be saved via standard OS sharing dialog, has channels + samplerate of default device output in WAV format.
-                    </p>
+                    <p>History Machine keeps a rolling buffer of the final mix, so recording can include what happened before the button was pressed. Record starts an ordinary take instead. Both save stereo audio through the system dialog.<br><br>Recording formats are AAC/M4A at 256 kbps, lossless 24-bit FLAC (default) and 24-bit WAV. History length and processing sample rate are configurable in Settings.</p>
                 </div>
             </div>
             <div class="feature">
                 <h3>MIDI and Ableton Link</h3>
                 <div class="feature-row">
                     <h2>Sync clock</h2>
-                    <p>MIDI In/Out and Ableton Link are available as external clock sync sources. MIDI sync can use Network Sessions, Network RTP and Bluetooth MIDI, on macOS also configured IAC. You can also open relevant OS settings directly from the app.</p>
+                    <p>Internal clock, external MIDI clock and Ableton Link are supported, with MIDI and Link sync available as alternatives. MIDI routing includes CoreMIDI sources, network RTP sessions, Bluetooth MIDI and IAC buses on Mac. Clock output can go to a specific destination or be published as HostSonic Clock.<br><br>The transport has Play, Pause, Resume and Return to start; rewinding MIDI files keeps the audio engine and plug-ins running.</p>
                     <img src="sync_tempo.png" alt="" class="widget-large">
                 </div>
                 <div class="feature-row">
                     <h2>Send/Receive audio</h2>
-                    <p>Send final mix from mixer and receive from discovered Ableton Link Audio source(s) on each track.</p>
+                    <p>Link Audio works in both directions: incoming streams are available as track sources with the usual effects processing, and the final stereo mix can be shared from the mixer. Link controls are accessible from Tempo, the audio source picker and Link Audio Output.</p>
                     <img src="sync_audio_in.png" alt="" class="widget-large">
                 </div>
                 <div class="feature-row">
                     <img src="sync_audio_out.png" alt="" class="widget-large">
                 </div>
                 <div class="feature-row">
-                    <h2>Pads</h2>
-                    <p>Pads can be used for testing sending MIDI notes to a track either directly to its instrument or through its MIDI processor. They support pitch bending and MPE.</p>
+                    <h2>Pads and MIDI files</h2>
+                    <p>Pads play through the selected track's MIDI processors or bypass them in Direct mode. Optional MPE supports per-note pitch bend, vertical CC74 timbre and pressure on compatible displays or with Apple Pencil.<br><br>Either MIDI processor slot can also hold a MIDI file, following host tempo and transport with looping on by default. Incoming MIDI passes through, and the file drives your instruments and MIDI-enabled effects. MIDI files loaded as audio sources use the bundled General MIDI bank instead.</p>
                     <img src="sync_pads.png" alt="" class="widget-large">
                 </div>
             </div>
             <div class="feature available">
                 <h3>Available</h3>
-                Available as a standalone app and an AUv3 plug-in.
+                Standalone Audio Unit host for Mac, iPhone and iPad. Hosts AUv3 plug-ins on iOS/iPadOS, and AUv3 and AUv2 plug-ins on macOS.
                 <div class="feature-row">
                     <h2>Mac</h2>
-                    <img src="app_macOS.png" alt="TraceSonic running as an Audio Unit plug-in on Mac" class="widget-large">
+                    <img src="app_macOS.png" alt="HostSonic standalone host on Mac" class="widget-large">
                 </div>
                 <div class="feature-row">
                     <h2>iPhone</h2>
-                    <img src="app_iOS.png" alt="TraceSonic running on iPhone" class="widget-large">
+                    <img src="app_iOS.png" alt="HostSonic standalone host on iPhone" class="widget-large">
                 </div>
                 <div class="feature-row">
                     <h2>iPad</h2>
-                    <img src="app_iPadOS.png" alt="TraceSonic running as an AUv3 instrument on iPad" class="widget-large">
+                    <img src="app_iPadOS.png" alt="HostSonic standalone host on iPad" class="widget-large">
                 </div>
-                <a href="https://github.com/r618/TraceSonic-Docs/blob/main/CHANGELOG.md">Changelog</a>
-                <a href="https://github.com/r618/TraceSonic-Docs/blob/main/HELP.md">Help doc - also available within the app</a>
+                <a href="https://github.com/r618/HostSonicMicro-Docs/blob/master/CHANGELOG.md">Changelog</a>
+                <a href="https://github.com/r618/HostSonicMicro-Docs/blob/master/HELP.md">Help doc - also available within the app</a>
+                <a href="https://github.com/r618/HostSonicMicro-Docs/blob/master/SESSION_FORMAT.md">Open session format</a>
             </div>
         </div>
 
