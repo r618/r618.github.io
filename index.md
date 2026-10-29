@@ -18,7 +18,7 @@ Most of what I make relates to people.
 
 ### AudioStreamSpeechCerulean - Unity-friendly speech recognition/synthesis via Microsoft Azure Cognitive Services
 - Based on the [Microsoft Speech SDK](https://github.com/Azure-Samples/cognitive-services-speech-sdk)
-- Asset Store: [o AudioStreamSpeechCelurean o](https://assetstore.unity.com/packages/slug/247489?aid=1100l7sC8), [latest documentation](https://github.com/r618/AudioStreamSpeechCerulean_Docs)
+- Asset Store: [o AudioStreamSpeechCerulean o](https://assetstore.unity.com/packages/slug/247489?aid=1100l7sC8), [latest documentation](https://github.com/r618/AudioStreamSpeechCerulean_Docs)
 - For support, please use the [Unity forums](https://forum.unity.com/threads/in-development-audiostreamspeechcelurean.1388841/).
 
 <!-- EOL
@@ -56,7 +56,7 @@ Most of what I make relates to people.
 - an experimental live processor similar to now defunct RjDj scenes (iOS/iPadOS/macOS)
 
 ### [HostSonic μ](https://r618.github.io/HostSonicMicro/)
-- small but capable AU (AudioUnit) hosting application /iPadOS/macOS)
+- small but capable AU (AudioUnit) hosting application (iPadOS/macOS)
 
 ### @
 - Selected current [work and installations for clients](https://www.youtube.com/channel/UCVdrkPBPUXeglvUY4hqOydA)
