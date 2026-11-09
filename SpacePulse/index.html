@@ -12,7 +12,52 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>|| Space Pulse ||</title>
+    <title>Space Pulse | Sun, Moon &amp; Planet Widgets for iOS and Mac</title>
+    <meta name="description" content="Track the Sun, Moon and planets with Space Pulse widgets for iPhone, iPad and Mac. See local phase, position, distance, and rise and set times at a glance.">
+    <meta name="author" content="Martin Cvengroš">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://r618.github.io/SpacePulse/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Martin Cvengroš | r618">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Space Pulse | Sun, Moon &amp; Planet Widgets for iOS and Mac">
+    <meta property="og:description" content="Track the Sun, Moon and planets with Space Pulse widgets for iPhone, iPad and Mac. See local phase, position, distance, and rise and set times at a glance.">
+    <meta property="og:url" content="https://r618.github.io/SpacePulse/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@r618">
+    <meta name="twitter:title" content="Space Pulse | Sun, Moon &amp; Planet Widgets for iOS and Mac">
+    <meta name="twitter:description" content="Track the Sun, Moon and planets with Space Pulse widgets for iPhone, iPad and Mac. See local phase, position, distance, and rise and set times at a glance.">
+    <meta property="og:image" content="https://r618.github.io/SpacePulse/widget_LargeFull.png">
+    <meta property="og:image:secure_url" content="https://r618.github.io/SpacePulse/widget_LargeFull.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="688">
+    <meta property="og:image:height" content="688">
+    <meta property="og:image:alt" content="Space Pulse widget with celestial phase, position and rise and set times">
+    <meta name="twitter:image" content="https://r618.github.io/SpacePulse/widget_LargeFull.png">
+    <meta name="twitter:image:alt" content="Space Pulse widget with celestial phase, position and rise and set times">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Space Pulse",
+      "url": "https://r618.github.io/SpacePulse/",
+      "description": "Track the Sun, Moon and planets with Space Pulse widgets for iPhone, iPad and Mac. See local phase, position, distance, and rise and set times at a glance.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "name": "Martin Cvengroš",
+        "url": "https://r618.github.io/"
+      },
+      "mainEntityOfPage": "https://r618.github.io/SpacePulse/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": [
+        "iOS",
+        "iPadOS",
+        "macOS"
+      ],
+      "image": "https://r618.github.io/SpacePulse/widget_LargeFull.png"
+    }
+    </script>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -107,7 +152,8 @@
             padding: 28px 24px;
             box-sizing: border-box;
         }
-        .feature h3 {
+        .feature-title {
+            margin-bottom: 1em;
             margin-top: 0;
             font-size: 2.2rem;
             text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
@@ -117,6 +163,10 @@
             margin-top: auto;
             margin-bottom: 0;
             padding-top: 28px;
+        }
+        .feature-row-title {
+            font-size: 1.5em;
+            margin-block: 0.83em;
         }
         .feature-row {
             display: grid;
@@ -233,55 +283,55 @@
         </p>
 
         <div class="hero-devices">
-            <img src="mainApp_macOS.png" alt="Space Pulse on Mac" class="device-mac">
-            <img src="mainApp_iOS.png" alt="Space Pulse on iPhone" class="device-iphone">
-            <img src="mainApp_iPadOS.png" alt="Space Pulse on iPad" class="device-ipad">
+            <img src="mainApp_macOS.png" alt="Space Pulse on Mac" class="device-mac" width="3860" height="2540" fetchpriority="high">
+            <img src="mainApp_iOS.png" alt="Space Pulse on iPhone" class="device-iphone" width="1350" height="2760">
+            <img src="mainApp_iPadOS.png" alt="Space Pulse on iPad" class="device-ipad" width="2040" height="2760">
         </div>
 
         <div class="features">
             <div class="feature">
-                <h3>At a glance</h3>
+                <h2 class="feature-title">At a glance</h2>
                 <div class="feature-row">
-                    <img src="widget_SmallFull.png" alt="Small Space Pulse widget showing phase and horizon position" class="widget-small">
-                    <h2>Phase and position relative to your local horizon</h2>
+                    <img src="widget_SmallFull.png" alt="Small Space Pulse widget showing phase and horizon position" class="widget-small" width="328" height="328" loading="lazy" decoding="async">
+                    <h3 class="feature-row-title">Phase and position relative to your local horizon</h3>
                 </div>
                 <div class="feature-row">
-                    <img src="widget_MediumFull.png" alt="Medium Space Pulse widget showing phase, distance, and rise and set times" class="widget-medium">
-                    <h2>Key data: current phase, distance, and rise and set times</h2>
+                    <img src="widget_MediumFull.png" alt="Medium Space Pulse widget showing phase, distance, and rise and set times" class="widget-medium" width="688" height="328" loading="lazy" decoding="async">
+                    <h3 class="feature-row-title">Key data: current phase, distance, and rise and set times</h3>
                 </div>
                 <div class="feature-row">
-                    <img src="widget_LargeFull.png" alt="Large Space Pulse widget showing detailed celestial-body data" class="widget-large">
-                    <h2>The full picture, in detail</h2>
-                </div>
-            </div>
-            <div class="feature">
-                <h3>Choose what you see</h3>
-                <div class="feature-row">
-                    <img src="widget_LargeConfiguration.png" alt="Space Pulse widget configuration with selectable data fields" class="widget-config">
-                    <h2>Configure each widget to show exactly the data you want</h2>
-                </div>
-                <div class="feature-row">
-                    <img src="widget_LargeConfigurationFull.png" alt="Large Space Pulse widget configured to show all details" class="widget-large">
-                    <h2>Display all the details</h2>
-                </div>
-                <div class="feature-row">
-                    <img src="widget_SmallConfigurationNothing.png" alt="Small Space Pulse widget configured with no optional details" class="widget-small">
-                    <h2>Or nothing at all</h2>
+                    <img src="widget_LargeFull.png" alt="Large Space Pulse widget showing detailed celestial-body data" class="widget-large" width="688" height="688" loading="lazy" decoding="async">
+                    <h3 class="feature-row-title">The full picture, in detail</h3>
                 </div>
             </div>
             <div class="feature">
-                <h3>Available</h3>
+                <h2 class="feature-title">Choose what you see</h2>
                 <div class="feature-row">
-                    <img src="widgets_Mac.png" alt="Space Pulse widgets on a Mac desktop" class="widget-large">
-                    <h2>Mac</h2>
+                    <img src="widget_LargeConfiguration.png" alt="Space Pulse widget configuration with selectable data fields" class="widget-config" width="797" height="1150" loading="lazy" decoding="async">
+                    <h3 class="feature-row-title">Configure each widget to show exactly the data you want</h3>
                 </div>
                 <div class="feature-row">
-                    <img src="widgets_iPhone.png" alt="Space Pulse widgets on an iPhone Home Screen" class="widget-large">
-                    <h2>iPhone</h2>
+                    <img src="widget_LargeConfigurationFull.png" alt="Large Space Pulse widget configured to show all details" class="widget-large" width="688" height="688" loading="lazy" decoding="async">
+                    <h3 class="feature-row-title">Display all the details</h3>
                 </div>
                 <div class="feature-row">
-                    <img src="widgets_iPad.png" alt="Space Pulse widgets on an iPad Home Screen" class="widget-large">
-                    <h2>iPad</h2>
+                    <img src="widget_SmallConfigurationNothing.png" alt="Small Space Pulse widget configured with no optional details" class="widget-small" width="328" height="328" loading="lazy" decoding="async">
+                    <h3 class="feature-row-title">Or nothing at all</h3>
+                </div>
+            </div>
+            <div class="feature">
+                <h2 class="feature-title">Available</h2>
+                <div class="feature-row">
+                    <img src="widgets_Mac.png" alt="Space Pulse widgets on a Mac desktop" class="widget-large" width="3860" height="2540" loading="lazy" decoding="async">
+                    <h3 class="feature-row-title">Mac</h3>
+                </div>
+                <div class="feature-row">
+                    <img src="widgets_iPhone.png" alt="Space Pulse widgets on an iPhone Home Screen" class="widget-large" width="1350" height="2760" loading="lazy" decoding="async">
+                    <h3 class="feature-row-title">iPhone</h3>
+                </div>
+                <div class="feature-row">
+                    <img src="widgets_iPad.png" alt="Space Pulse widgets on an iPad Home Screen" class="widget-large" width="2040" height="2760" loading="lazy" decoding="async">
+                    <h3 class="feature-row-title">iPad</h3>
                 </div>
             </div>
         </div>

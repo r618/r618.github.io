@@ -1,8 +1,25 @@
-title: ~/.
-description: of Martin Cvengroš
+title: Martin Cvengroš
+tagline: Apps, Games and Unity Audio Tools
+description: Independent apps, games and Unity audio tools by Martin Cvengroš (r618).
+url: "https://r618.github.io"
+baseurl: ""
+lang: en-US
+locale: en_US
+author: Martin Cvengroš
+twitter:
+  username: r618
+  card: summary
+social:
+  name: Martin Cvengroš
+  links:
+    - https://github.com/r618
+    - https://x.com/r618
+    - https://bsky.app/profile/r618.bsky.social
+    - https://soundcloud.com/r618
 google_analytics: UA-83603222-1
 show_downloads: false
 theme: jekyll-theme-minimal
 
-gems:
+plugins:
   - jekyll-mentions
+  - jekyll-seo-tag

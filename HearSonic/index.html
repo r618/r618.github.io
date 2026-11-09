@@ -12,7 +12,52 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>:.o HearSonic - live granular sound processor for iOS and macOS o.:</title>
+    <title>HearSonic | Live Granular Audio Processor &amp; AUv3 Effect</title>
+    <meta name="description" content="Transform live sound into grains, resonance, echoes and shimmer with HearSonic for iPhone, iPad and Mac. Use it standalone or as an AUv3 effect and record audio.">
+    <meta name="author" content="Martin Cvengroš">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://r618.github.io/HearSonic/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Martin Cvengroš | r618">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="HearSonic | Live Granular Audio Processor &amp; AUv3 Effect">
+    <meta property="og:description" content="Transform live sound into grains, resonance, echoes and shimmer with HearSonic for iPhone, iPad and Mac. Use it standalone or as an AUv3 effect and record audio.">
+    <meta property="og:url" content="https://r618.github.io/HearSonic/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@r618">
+    <meta name="twitter:title" content="HearSonic | Live Granular Audio Processor &amp; AUv3 Effect">
+    <meta name="twitter:description" content="Transform live sound into grains, resonance, echoes and shimmer with HearSonic for iPhone, iPad and Mac. Use it standalone or as an AUv3 effect and record audio.">
+    <meta property="og:image" content="https://r618.github.io/HearSonic/mainApp_macOS.png">
+    <meta property="og:image:secure_url" content="https://r618.github.io/HearSonic/mainApp_macOS.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="3860">
+    <meta property="og:image:height" content="2540">
+    <meta property="og:image:alt" content="HearSonic live granular audio processor on Mac">
+    <meta name="twitter:image" content="https://r618.github.io/HearSonic/mainApp_macOS.png">
+    <meta name="twitter:image:alt" content="HearSonic live granular audio processor on Mac">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "HearSonic",
+      "url": "https://r618.github.io/HearSonic/",
+      "description": "Transform live sound into grains, resonance, echoes and shimmer with HearSonic for iPhone, iPad and Mac. Use it standalone or as an AUv3 effect and record audio.",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "name": "Martin Cvengroš",
+        "url": "https://r618.github.io/"
+      },
+      "mainEntityOfPage": "https://r618.github.io/HearSonic/",
+      "applicationCategory": "MusicApplication",
+      "operatingSystem": [
+        "iOS",
+        "iPadOS",
+        "macOS"
+      ],
+      "image": "https://r618.github.io/HearSonic/mainApp_macOS.png"
+    }
+    </script>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -107,7 +152,8 @@
             padding: 28px 24px;
             box-sizing: border-box;
         }
-        .feature h3 {
+        .feature-title {
+            margin-bottom: 1em;
             margin-top: 0;
             font-size: 2.2rem;
             text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
@@ -122,7 +168,8 @@
             margin: 28px 0;
             text-align: left;
         }
-        .feature-row h2 {
+        .feature-row-title {
+            font-size: 1.5em;
             grid-area: heading;
             margin: 0;
             align-self: center;
@@ -257,74 +304,74 @@
         </p>
 
         <div class="hero-devices">
-            <img src="mainApp_macOS.png" alt="HearSonic main screen on Mac" class="device-mac">
-            <img src="mainApp_iOS.png" alt="HearSonic main screen on iPhone" class="device-iphone">
-            <img src="mainApp_iPadOS.png" alt="HearSonic main screen on iPad" class="device-ipad">
+            <img src="mainApp_macOS.png" alt="HearSonic main screen on Mac" class="device-mac" width="3860" height="2540" fetchpriority="high">
+            <img src="mainApp_iOS.png" alt="HearSonic main screen on iPhone" class="device-iphone" width="1350" height="2760">
+            <img src="mainApp_iPadOS.png" alt="HearSonic main screen on iPad" class="device-ipad" width="2040" height="2760">
         </div>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Sabqsgx_ijw?si=GbRWGj6RreSF0d0M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/Sabqsgx_ijw?si=GbRWGj6RreSF0d0M" title="HearSonic demonstration video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
         <div class="features">
             <div class="feature">
-                <h3>Live granular processor</h3>
+                <h2 class="feature-title">Live granular processor</h2>
                 <div class="feature-row">
-                    <h2>Tilt, Warp and device motion</h2>
-                    <img src="hs_main.png" alt="HearSonic main screen with the Tilt / Warp pad" class="widget-large">
+                    <h3 class="feature-row-title">Tilt, Warp and device motion</h3>
+                    <img src="hs_main.png" alt="HearSonic main screen with the Tilt / Warp pad" class="widget-large" width="712" height="1400" loading="lazy" decoding="async">
                     <p>Tilt ranges from slow, bass-heavy grains through tuned resonance to harmonics and shimmer. Warp adds longer grains, time scatter, reversals and spectral feedback. The side strips control Low weight and Harmonics.<br><br>On devices with motion sensors, Motion lets gravity move the ball and both controls. Pin centre sets its resting position; a long press resets it. Bypass passes dry input while processing continues, and Panic clears the buffers and stops standalone audio.</p>
                 </div>
                 <div class="feature-row">
-                    <h2>Sessions and presets</h2>
-                    <img src="hs_sessions.png" alt="Session browser with saved sessions and factory presets" class="widget-large">
+                    <h3 class="feature-row-title">Sessions and presets</h3>
+                    <img src="hs_sessions.png" alt="Session browser with saved sessions and factory presets" class="widget-large" width="804" height="1400" loading="lazy" decoding="async">
                     <p>Sessions keep the full setup, with automatic restoration of the current session on launch. The browser handles saved sessions and factory presets for textures, pads and rhythmic fragments. Presets leave Output gain, Input mode and MIDI mapping as they are. In a host, the session is saved with the project.</p>
                 </div>
                 <div class="feature-row">
-                    <h2>Grain</h2>
-                    <img src="hs_grain.png" alt="Expanded Grain parameters" class="widget-large">
+                    <h3 class="feature-row-title">Grain</h3>
+                    <img src="hs_grain.png" alt="Expanded Grain parameters" class="widget-large" width="1206" height="830" loading="lazy" decoding="async">
                     <p>Memory determines grain lookback and effect decay. The Grain group's Motion parameter adds scanning, stereo movement and pulsing, independently of device motion. Grain response controls level, density and onset sensitivity. Parameter descriptions are available in the app.</p>
                 </div>
                 <div class="feature-row">
-                    <h2>Input and output</h2>
-                    <img src="hs_input.png" alt="Expanded Input parameters" class="widget-large">
+                    <h3 class="feature-row-title">Input and output</h3>
+                    <img src="hs_input.png" alt="Expanded Input parameters" class="widget-large" width="1206" height="712" loading="lazy" decoding="async">
                     <p>Environment mode adapts to input activity and limits output peaks; Signal accepts quiet sources without output limiting. The standalone app defaults to Environment, the plug-in to Signal.<br><br>Input trim sits before processing. Grit adds saturation and shorter, denser fragments, with Dry / wet and Output gain controlling the final mix.</p>
                 </div>
                 <div class="feature-row">
-                    <h2>Scale</h2>
-                    <img src="hs_scale.png" alt="Expanded Scale parameters" class="widget-large">
+                    <h3 class="feature-row-title">Scale</h3>
+                    <img src="hs_scale.png" alt="Expanded Scale parameters" class="widget-large" width="1206" height="735" loading="lazy" decoding="async">
                     <p>Resonance and the harmonic wall follow a four-note chord rooted at Resonant pitch: Lydian maj7, minor pentatonic m7, harmonic minor m(maj7) or Dorian m6. The Harmonics strip brings in the wall at any Tilt position.</p>
                 </div>
             </div>
             <div class="feature">
-                <h3>MIDI, recording and hosting</h3>
+                <h2 class="feature-title">MIDI, recording and hosting</h2>
                 <div class="feature-row">
-                    <h2>MIDI In</h2>
+                    <h3 class="feature-row-title">MIDI In</h3>
                     <p>MIDI notes can set resonance pitch, transpose grains, control both, or tune and gate resonance and the harmonic wall. Echo, Space and Fragments have gate modes too. Velocity controls gated levels, sustain holds gates, and tails continue after release.<br><br>Grain playback supports velocity, pitch bend, pressure and MPE, with CC74 moving through captured audio. The standalone app receives connected MIDI sources; the plug-in receives MIDI from its host.</p>
-                    <img src="hs_midi.png" alt="MIDI Notes control options in Settings" class="widget-large">
+                    <img src="hs_midi.png" alt="MIDI Notes control options in Settings" class="widget-large" width="1206" height="1320" loading="lazy" decoding="async">
                 </div>
                 <div class="feature-row">
-                    <h2>History Machine and Record</h2>
+                    <h3 class="feature-row-title">History Machine and Record</h3>
                     <p>History Machine adds buffered output to the beginning of a recording, with 15 to 300 seconds of history and a 60-second default. Record starts a take immediately. Both are standalone features and save stereo audio through the system dialog.<br><br>Formats are AAC/M4A at 256 kbps (default) and lossless 24-bit FLAC, with estimated file size shown in Settings. AAC converts processing rates above 48 kHz to 44.1 or 48 kHz.</p>
-                    <img src="hs_hm.png" alt="History Machine and Record buttons with buffer settings" class="widget-large">
+                    <img src="hs_hm.png" alt="History Machine and Record buttons with buffer settings" class="widget-large" width="1206" height="1320" loading="lazy" decoding="async">
                 </div>
                 <div class="feature-row">
-                    <h2>AUv3 in a host</h2>
+                    <h3 class="feature-row-title">AUv3 in a host</h3>
                     <p>As an AUv3 effect, HearSonic processes instruments, tracks and recordings in a compatible host, including HostSonic μ on Mac. Audio, MIDI and sample rate come from the host; bypass keeps the effect running underneath the dry signal.<br><br>The standalone app supports the device rate or a selected 44.1, 48 or 96 kHz.</p>
-                    <img src="hs_hosted.png" alt="HearSonic AUv3 open in HostSonic μ on Mac" class="widget-large">
+                    <img src="hs_hosted.png" alt="HearSonic AUv3 open in HostSonic μ on Mac" class="widget-large" width="1391" height="1400" loading="lazy" decoding="async">
                 </div>
             </div>
             <div class="feature available">
-                <h3>Available</h3>
+                <h2 class="feature-title">Available</h2>
                 Available as a standalone app and an AUv3 effect.
                 <div class="feature-row">
-                    <h2>Mac</h2>
-                    <img src="app_macOS.png" alt="HearSonic standalone app on Mac" class="widget-large">
+                    <h3 class="feature-row-title">Mac</h3>
+                    <img src="app_macOS.png" alt="HearSonic standalone app on Mac" class="widget-large" width="643" height="1400" loading="lazy" decoding="async">
                 </div>
                 <div class="feature-row">
-                    <h2>iPhone</h2>
-                    <img src="app_iOS.png" alt="HearSonic standalone app on iPhone" class="widget-large">
+                    <h3 class="feature-row-title">iPhone</h3>
+                    <img src="app_iOS.png" alt="HearSonic standalone app on iPhone" class="widget-large" width="644" height="1400" loading="lazy" decoding="async">
                 </div>
                 <div class="feature-row">
-                    <h2>iPad</h2>
-                    <img src="app_iPadOS.png" alt="HearSonic standalone app on iPad" class="widget-large">
+                    <h3 class="feature-row-title">iPad</h3>
+                    <img src="app_iPadOS.png" alt="HearSonic standalone app on iPad" class="widget-large" width="1315" height="1400" loading="lazy" decoding="async">
                 </div>
                 <a href="https://github.com/r618/HearSonic-Docs/blob/main/CHANGELOG.md">Changelog</a>
                 <a href="https://github.com/r618/HearSonic-Docs/blob/main/HELP.md">Help doc - also available within the app</a>
@@ -343,7 +390,7 @@
 
     </div>
     <footer>
-        <p>&copy; 2026&ndash;present <a href="https://r618.github.io/">Martin Cvengroš</a> (<a href="privacypolicy.txt">Privacy policy</a>)<img src="//ipv4.games/claim/r618"></p>
+        <p>&copy; 2026&ndash;present <a href="https://r618.github.io/">Martin Cvengroš</a> (<a href="privacypolicy.txt">Privacy policy</a>)<img src="//ipv4.games/claim/r618" alt=""></p>
     </footer>
 
     <div class="lightbox" id="lightbox">
