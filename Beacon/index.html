@@ -185,7 +185,7 @@
     </header>
     <main id="main" class="container">
         <div class="intro">
-            <p class="lede">Check your online status and find out about any connection issues quickly.</p>
+            <p class="lede">Check your online status, find out and identify any connection issues quickly.</p>
             <p>Beacon pings your gateway, a couple of internet hosts and whatever else you point it at periodically on macOS - see below for iPhone/iPad -, tells you when a layer breaks and keeps record of everything. Every drop gets logged with start, end and duration, next to whatever changed on the network at the time. Runs in the Mac menu bar and on iPhone and iPad.</p>
             <div class="download">
                 <a href="https://apps.apple.com/app/space-pulse-cosmic-glance/id6791366704"><img src="appstorebadge.png" alt="Download on the App Store" width="598" height="200"></a>
@@ -194,8 +194,8 @@
             <p class="requirements">macOS 14+ · iOS / iPadOS 17+ · No account · No tracking</p>
         </div>
         <div class="hero-devices">
-            <figure class="hero-mac"><button class="zoom" type="button" aria-label="Enlarge Beacon on Mac"><img class="shot" src="status-mac.png" alt="Beacon Mac menu bar panel with live targets, response times and recent status" width="692" height="1428" fetchpriority="high"></button><figcaption>In the Mac menu bar.</figcaption></figure>
-            <figure class="hero-phone"><button class="zoom" type="button" aria-label="Enlarge Beacon on iPhone"><img class="shot" src="status-ios.png" alt="Beacon on iPhone with connection details, target response times and the last outage" width="790" height="1580"></button><figcaption>On iPhone and iPad.</figcaption></figure>
+            <figure class="hero-mac"><button class="zoom" type="button" aria-label="Enlarge Beacon on Mac"><img class="shot" src="status-mac.gif" alt="Beacon in the Mac menu bar: the radar dish makes one turn per check while the panel lists live targets, response times and recent status" width="698" height="1432" fetchpriority="high"></button><figcaption>In the Mac menu bar.</figcaption></figure>
+            <figure class="hero-phone"><button class="zoom" type="button" aria-label="Enlarge Beacon on iPhone"><img class="shot" src="status-ios.gif" alt="Beacon on iPhone: the radar dish turns once per check above connection details, target response times and the last outage" width="790" height="1580"></button><figcaption>On iPhone and iPad.</figcaption></figure>
         </div>
 
         <section class="layers" aria-labelledby="layers-title">
@@ -265,7 +265,7 @@
             <div>
                 <h2 id="checks-title">Checks &amp; targets</h2>
                 <p>Paste whatever you’ve got: <code>1.1.1.1</code>, <code>nas.local:445</code>, <code>https://example.com/health</code>, <code>dns:apple.com@1.1.1.1</code>. Beacon works out the check type and layer.</p>
-                <p>Ping is proper ICMP, no helper or admin password needed. TCP times the handshake for hosts that drop ICMP. DNS queries go straight to the resolver, so a cached answer can’t fake a pass. HTTPS checks keep an eye on cert expiry.</p>
+                <p>Ping is proper ICMP, no helper or admin password needed. TCP times the handshake for hosts that drop ICMP, DNS queries go to the resolver, so a cached answer can’t fake a pass. HTTPS checks keep an eye on and warn about cert expiry.</p>
                 <p>Every target comes with the matching <code>ping</code>, <code>dig</code>, <code>nc</code> or <code>curl</code> line if you want to double-check from Terminal. Each network can have its own target list, switched automatically when you join it.</p>
             </div>
             <figure class="phone"><button class="zoom" type="button" aria-label="Enlarge the target inspector"><img class="shot" src="target-ios.png" alt="Target inspector on iPhone with Ping, DNS, TCP and HTTP check types, layer and last result" width="790" height="1580" loading="lazy" decoding="async"></button></figure>
