@@ -65,7 +65,7 @@ Most of the stuff I make relates to humans.
 ## [HostSonic μ](https://r618.github.io/HostSonicMicro/)
 - small but capable AU (AudioUnit) hosting application (iPadOS/macOS)
 
-## [Beacon](https://r618.github.io/Beacon/)
+## [Beacon Echo](https://r618.github.io/Beacon/)
 - network monitor with saved outage history, latency charts and diagnostics for Mac, iPhone and iPad
 
 ## Contact

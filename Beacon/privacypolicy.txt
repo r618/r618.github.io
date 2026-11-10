@@ -1,31 +1,31 @@
-﻿Beacon — Privacy Policy
+﻿Beacon Echo — Privacy Policy
 Last updated: 10 November 2026
 
-Beacon is a network monitoring app by Martin Cvengroš.
+Beacon Echo is a network monitoring app by Martin Cvengroš.
 
 The app
 
-Beacon has no user accounts, advertising, analytics or usage tracking. The developer does not receive your monitoring records.
+Beacon Echo has no user accounts, advertising, analytics or usage tracking. The developer does not receive your monitoring records.
 
-Beacon stores settings, target addresses, network profiles, latency history and outage logs on your device. These records can contain IP addresses, Wi-Fi names, router hardware addresses and other network details. Outage records are kept for 90 days by default; you can change the retention period or delete records in the app. Latency history covers the last 24 hours.
+Beacon Echo stores settings, target addresses, network profiles, latency history and outage logs on your device. These records can contain IP addresses, Wi-Fi names, router hardware addresses and other network details. Outage records are kept for 90 days by default; you can change the retention period or delete records in the app. Latency history covers the last 24 hours.
 
 Network requests
 
-Beacon sends checks to the targets you enable. The default targets are Cloudflare (1.1.1.1) and Google (8.8.8.8). DNS checks use your system resolver or the resolver you specify. HTTP(S) checks contact the configured website. Route tracing sends probes along the route to the selected destination and can perform reverse DNS lookups. As with other network traffic, the receiving services can see the source IP address and the requests they receive.
+Beacon Echo sends checks to the targets you enable. The default targets are Cloudflare (1.1.1.1) and Google (8.8.8.8). DNS checks use your system resolver or the resolver you specify. HTTP(S) checks contact the configured website. Route tracing sends probes along the route to the selected destination and can perform reverse DNS lookups. As with other network traffic, the receiving services can see the source IP address and the requests they receive.
 
 A public IP lookup is made only when you request it. It contacts Cloudflare at https://1.1.1.1/cdn-cgi/trace.
 
 Optional features
 
-Location permission is requested only when you ask to show Wi-Fi details. The operating system requires this permission to expose the network name. Beacon does not use it to track your physical location.
+Location permission is requested only when you ask to show Wi-Fi details. The operating system requires this permission to expose the network name. Beacon Echo does not use it to track your physical location.
 
-If you enable webhooks, Beacon sends alert information to the endpoints you configure. Depending on the format, this can include your device name, target names and addresses, status, event details and timestamps. The receiving service handles that data under its own privacy policy.
+If you enable webhooks, Beacon Echo sends alert information to the endpoints you configure. Depending on the format, this can include your device name, target names and addresses, status, event details and timestamps. The receiving service handles that data under its own privacy policy.
 
 Reports and exports are created or shared when you choose. Diagnostics hide identifying details by default. Review files before sharing them, as outage exports and other reports can include network information.
 
 This website
 
-This app page uses Google Analytics to measure website visits. That is separate from the Beacon app, which does not use analytics. Google handles website analytics data under its own privacy policy.
+This app page uses Google Analytics to measure website visits. That is separate from the Beacon Echo app, which does not use analytics. Google handles website analytics data under its own privacy policy.
 
 Contact
 
