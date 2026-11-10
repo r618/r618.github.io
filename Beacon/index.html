@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js), shared with the other app pages. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCDP208E0R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GCDP208E0R');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beacon | Network Monitor &amp; Outage History for Mac, iPhone &amp; iPad</title>
+    <meta name="description" content="Monitor network health with Beacon. Track outages, latency and packet loss, check ping, DNS, TCP and HTTP targets, and export records for support tickets.">
+    <meta name="author" content="Martin Cvengroš">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://r618.github.io/Beacon/">
+    <link rel="icon" type="image/png" href="icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Martin Cvengroš | r618">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Beacon | Network Monitor &amp; Outage History for Mac, iPhone &amp; iPad">
+    <meta property="og:description" content="Monitor network health with Beacon. Track outages, latency and packet loss, check ping, DNS, TCP and HTTP targets, and export records for support tickets.">
+    <meta property="og:url" content="https://r618.github.io/Beacon/">
+    <meta property="og:image" content="https://r618.github.io/Beacon/social.png">
+    <meta property="og:image:secure_url" content="https://r618.github.io/Beacon/social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Beacon network monitor with saved outage history and live network status">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@r618">
+    <meta name="twitter:title" content="Beacon | Network Monitor &amp; Outage History for Mac, iPhone &amp; iPad">
+    <meta name="twitter:description" content="Monitor network health with Beacon. Track outages, latency and packet loss, check ping, DNS, TCP and HTTP targets, and export records for support tickets.">
+    <meta name="twitter:image" content="https://r618.github.io/Beacon/social.png">
+    <meta name="twitter:image:alt" content="Beacon network monitor with saved outage history and live network status">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Beacon",
+    "url": "https://r618.github.io/Beacon/",
+    "description": "Monitor network health with Beacon. Track outages, latency and packet loss, check ping, DNS, TCP and HTTP targets, and export records for support tickets.",
+    "inLanguage": "en",
+    "author": {
+        "@type": "Person",
+        "name": "Martin Cvengroš",
+        "url": "https://r618.github.io/"
+    },
+    "mainEntityOfPage": "https://r618.github.io/Beacon/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": [
+        "macOS 14 or later",
+        "iOS 17 or later",
+        "iPadOS 17 or later"
+    ],
+    "image": "https://r618.github.io/Beacon/social.png",
+    "featureList": [
+        "Network status in the Mac menu bar",
+        "Ping, DNS, TCP and HTTP(S) checks",
+        "Saved outage history with CSV and JSON export",
+        "Per-target latency charts",
+        "Markdown diagnostics reports",
+        "Notifications and webhooks"
+    ]
+}
+    </script>
+    <style>
+        :root { color-scheme: dark; --text: #eee; --muted: #b9c1bd; --accent: #9dd6b5; }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: #222; color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; }
+        a { color: var(--accent); text-underline-offset: 4px; }
+        a:hover { color: #d1f5df; }
+        :focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+        .skip { position: absolute; left: 16px; top: -70px; padding: 10px 16px; background: #222; }
+        .skip:focus { top: 12px; }
+        header { padding: 42px 20px 28px; text-align: center; }
+        .brand { display: flex; align-items: center; justify-content: center; gap: 18px; }
+        .app-icon { width: 68px; height: 68px; border-radius: 16px; }
+        h1 { margin: 0; font-family: "Courier New", Courier, monospace; font-size: clamp(2.3rem, 6vw, 3.2rem); letter-spacing: .06em; }
+        .container { max-width: 1120px; margin: auto; padding: 0 24px; }
+        .intro { max-width: 660px; margin: 0 auto; text-align: center; }
+        .intro p { margin: 0 0 20px; font-size: 1.2rem; }
+        .download { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin: 24px 0 12px; }
+        .download a { display: inline-flex; }
+        .download img { display: block; width: 200px; height: auto; }
+        .requirements { color: var(--muted); font-size: .85rem !important; }
+        .hero-devices { display: flex; justify-content: center; align-items: flex-start; gap: 36px; margin: 38px auto 54px; }
+        figure { min-width: 0; margin: 0; }
+        .hero-mac { width: 265px; }
+        .hero-phone { width: 255px; }
+        .zoom { display: block; width: 100%; padding: 0; border: 0; background: none; color: inherit; cursor: zoom-in; }
+        .shot { display: block; width: 100%; height: auto; border-radius: 8px; }
+        figcaption { margin-top: 10px; color: var(--muted); text-align: center; font-size: .9rem; }
+        .features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; }
+        h2 { margin: 0 0 12px; font-size: 1.4rem; line-height: 1.3; }
+        .features p { color: var(--muted); margin: 16px 0 0; }
+        .details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; margin: 48px 0; padding-top: 30px; border-top: 1px solid #424743; }
+        .details p { margin: 0 0 14px; color: var(--muted); }
+        .details p:last-child { margin-bottom: 0; }
+        .contact { margin: 36px auto; text-align: center; color: var(--muted); font-size: .95rem; }
+        footer { padding: 22px; background: #2b2d2c; text-align: center; color: var(--muted); font-size: .9rem; }
+        footer p { margin: 0; }
+        dialog { border: 0; padding: 54px 20px 20px; width: 96vw; max-width: 1800px; max-height: 96vh; background: #171b19; color: var(--text); border-radius: 10px; }
+        dialog::backdrop { background: #000d; }
+        dialog img { display: block; max-width: 100%; max-height: 78vh; width: auto; height: auto; margin: auto; object-fit: contain; }
+        .close { position: absolute; right: 16px; top: 12px; border: 1px solid #66746b; border-radius: 6px; padding: 6px 12px; background: #28362e; color: #fff; font: inherit; cursor: pointer; }
+        dialog p { text-align: center; margin: 14px 0 0; color: var(--muted); font-size: .9rem; }
+        @media (max-width: 760px) {
+            .features { grid-template-columns: 1fr; gap: 36px; max-width: 560px; margin: auto; }
+            .details { grid-template-columns: 1fr; gap: 30px; }
+            .hero-devices { gap: 18px; }
+            .hero-mac { width: 48%; max-width: 265px; }
+            .hero-phone { width: 46%; max-width: 255px; }
+        }
+        @media (max-width: 460px) {
+            .container { padding: 0 18px; }
+            header { padding-top: 30px; }
+            .intro p { font-size: 1.1rem; }
+            .download { gap: 10px; }
+            .download a { max-width: calc(50% - 5px); }
+            .download img { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+        <div class="brand"><img class="app-icon" src="icon.png" alt="" width="1024" height="1024"><h1>Beacon</h1></div>
+    </header>
+    <main id="main" class="container">
+        <div class="intro">
+            <p>A small network monitor for Mac, iPhone and iPad. Check your router, internet connection and servers. See what stopped responding, when it happened and how long it lasted.</p>
+            <div class="download">
+                <a href="https://apps.apple.com/app/space-pulse-cosmic-glance/id6791366704"><img src="appstorebadge.png" alt="Download on the App Store" width="598" height="200"></a>
+                <a href="https://apps.apple.com/app/space-pulse-cosmic-glance/id6791366704"><img src="macappstorebadge.png" alt="Download on the Mac App Store" width="598" height="200"></a>
+            </div>
+            <p class="requirements">macOS 14+ · iOS / iPadOS 17+</p>
+        </div>
+        <div class="hero-devices">
+            <figure class="hero-mac"><button class="zoom" type="button" aria-label="Enlarge Beacon on Mac"><img class="shot" src="status-mac.png" alt="Beacon Mac menu bar panel with live targets, response times and recent status" width="680" height="1346" fetchpriority="high"></button><figcaption>In the Mac menu bar.</figcaption></figure>
+            <figure class="hero-phone"><button class="zoom" type="button" aria-label="Enlarge Beacon on iPhone"><img class="shot" src="status-ios.png" alt="Beacon on iPhone with connection details, target response times and the last outage" width="790" height="1580"></button><figcaption>On iPhone and iPad.</figcaption></figure>
+        </div>
+        <div class="features">
+            <section aria-labelledby="outages-title">
+                <h2 id="outages-title">Outage history</h2>
+                <figure><button class="zoom" type="button" aria-label="Enlarge the outage log"><img class="shot" src="outages-mac.png" alt="Outage log with start and end times, duration, filters and export controls" width="2284" height="1120" loading="lazy" decoding="async"></button></figure>
+                <p>Offline periods, slow connections and individual target failures are saved with their times and duration. Filter the log and export CSV or JSON. Records stay for 90 days by default; change that in Settings.</p>
+            </section>
+            <section aria-labelledby="latency-title">
+                <h2 id="latency-title">Latency</h2>
+                <figure><button class="zoom" type="button" aria-label="Enlarge the latency chart"><img class="shot" src="latency-mac.png" alt="Per-target latency chart with average, p95, jitter and packet loss" width="1596" height="1194" loading="lazy" decoding="async"></button></figure>
+                <p>Compare response times and packet loss over 15 minutes, an hour or a day. Inspect spikes and failed checks for each target. The last 24 hours are saved across app restarts.</p>
+            </section>
+            <section aria-labelledby="diagnostics-title">
+                <h2 id="diagnostics-title">Diagnostics</h2>
+                <figure><button class="zoom" type="button" aria-label="Enlarge the diagnostics report"><img class="shot" src="diagnostics-mac.png" alt="Diagnostics report with identifying details hidden, ready to copy or save" width="1360" height="1056" loading="lazy" decoding="async"></button></figure>
+                <p>Copy or save a Markdown report with connection details, recent results and outages. Identifying details are hidden by default. A live route trace shows the responding hops and their reply times.</p>
+            </section>
+        </div>
+        <div class="details">
+            <section aria-labelledby="checks-title">
+                <h2 id="checks-title">Checks &amp; alerts</h2>
+                <p>Ping a host, look up a DNS name, test a TCP port or check an HTTP(S) endpoint. Group targets as LAN, WAN or DNS to see which part of the connection failed. Keep a separate target list for each network.</p>
+                <p>Get notifications when a connection drops or recovers, or send alerts to your own webhook, ntfy, Slack or Discord.</p>
+            </section>
+            <section aria-labelledby="platforms-title">
+                <h2 id="platforms-title">Mac, iPhone &amp; iPad</h2>
+                <p>On Mac, a radar dish, lighthouse or simple status light sits in the menu bar. Green is online, yellow is degraded, red is offline.</p>
+                <p>On iPhone and iPad, checks run while the app is open and briefly after you leave it. Later background checks depend on iOS scheduling and Background App Refresh.</p>
+            </section>
+        </div>
+        <p class="contact">Questions or support: <a href="https://x.com/r618">X</a>, <a href="https://bsky.app/profile/r618.bsky.social">Bluesky</a> or <a href="https://www.threads.com/@r618.i">Threads</a>.</p>
+    </main>
+    <footer><p>&copy; 2026&ndash;present <a href="https://r618.github.io/">Martin Cvengroš</a> · <a href="privacypolicy.txt">Privacy policy</a></p></footer>
+    <dialog id="lightbox" aria-label="Screenshot preview">
+        <button class="close" type="button" aria-label="Close screenshot preview">Close ✕</button>
+        <img alt="">
+        <p></p>
+    </dialog>
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const preview = lightbox.querySelector('img');
+        const caption = lightbox.querySelector('p');
+        document.querySelectorAll('.zoom').forEach(button => {
+            button.addEventListener('click', () => {
+                const img = button.querySelector('img');
+                preview.src = img.src;
+                preview.alt = img.alt;
+                caption.textContent = img.alt;
+                lightbox.showModal();
+            });
+        });
+        lightbox.querySelector('.close').addEventListener('click', () => lightbox.close());
+        lightbox.addEventListener('click', event => {
+            if (event.target === lightbox) {
+                const bounds = lightbox.getBoundingClientRect();
+                if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) lightbox.close();
+            }
+        });
+        lightbox.addEventListener('close', () => { preview.removeAttribute('src'); });
+    </script>
+</body>
+</html>
