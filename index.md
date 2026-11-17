@@ -53,9 +53,6 @@ Most of the stuff I make relates to humans.
 ## [Hollows Of NHI](https://r618.github.io/HollowsOfNHI/)
 - "A Disclosure Rogue!" - a Rogue variant set in the modern age of complete disclosure.
 
-## [Space Pulse](https://r618.github.io/SpacePulse/)
-- I wanted a simple, glanceable widget for the Moon and other celestial bodies (iOS, iPadOS, and macOS; scientifically accurate).
-
 ## [TraceSonic](https://r618.github.io/TraceSonic/)
 - an experimental additive monosynth interpreting screen pixel data (iOS/iPadOS/macOS)
 
@@ -64,6 +61,9 @@ Most of the stuff I make relates to humans.
 
 ## [HostSonic μ](https://r618.github.io/HostSonicMicro/)
 - small but capable AU (AudioUnit) hosting application (iPadOS/macOS)
+
+## [Space Pulse](https://r618.github.io/SpacePulse/)
+- I wanted a simple, glanceable widget for the Moon and other celestial bodies (iOS, iPadOS, and macOS; scientifically accurate).
 
 ## [Beacon Echo](https://r618.github.io/Beacon/)
 - network monitor with saved outage history, latency charts and diagnostics for Mac, iPhone and iPad
